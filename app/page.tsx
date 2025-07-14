@@ -30,74 +30,22 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function ProfixLanding() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      {/* Header */}
-      <header className="bg-white/70 backdrop-blur border-b border-slate-200/60 sticky top-0 z-50 shadow-sm">
-        <div className="container max-w-7xl mx-auto px-4 py-1">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/profix-logo.png"
-                alt="PROFIX MARKETING"
-                width={180}
-                height={52}
-                className="h-12 w-auto"
-              />
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link
-                href="#about"
-                className="text-slate-700 text-sm hover:text-teal-600 transition-all duration-300 font-medium"
-              >
-                About
-              </Link>
-              <Link
-                href="#services"
-                className="text-slate-700 text-sm hover:text-teal-600 transition-all duration-300 font-medium"
-              >
-                Services
-              </Link>
-              <Link
-                href="#strategies"
-                className="text-slate-700 text-sm hover:text-teal-600 transition-all duration-300 font-medium"
-              >
-                Strategies
-              </Link>
-              <Link
-                href="#team"
-                className="text-slate-700 text-sm hover:text-teal-600 transition-all duration-300 font-medium"
-              >
-                Team
-              </Link>
-              <Link
-                href="#contact"
-                className="text-slate-700 text-sm hover:text-teal-600 transition-all duration-300 font-medium"
-              >
-                Contact
-              </Link>
-            </nav>
-            <Button
-              size="sm"
-              className="bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-black text-white shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Get Started
-              <Sparkles className="ml-2 w-4 h-4" />
-            </Button>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header nav />
 
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden bg-black text-white">
         <img
-          src="/hero-profix.webp"
+          src="/images/hero-profix.webp"
           alt="hero image"
           className="absolute inset-0 object-cover w-full opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-600/50 via-black to-slate-600/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-600/50 via-black to-muted-foreground/50"></div>
 
         <div className="container max-w-7xl mx-auto px-4 relative">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
@@ -115,10 +63,9 @@ export default function ProfixLanding() {
                   </span>
                 </h1>
                 <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
-                  Specializing in stocks, commodities, forex, and
-                  cryptocurrencies with a proven track record of 6-12% average
-                  client profitability and 93% satisfaction rate across 200+
-                  clients.
+                  Specialising in connecting you with top-tier, SCA-regulated
+                  platforms tailored for your day-to day trades & long term
+                  investment opportunities in financial markets
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -132,7 +79,7 @@ export default function ProfixLanding() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-slate-700 text-slate-300 hover:bg-slate-40 hover:text-slate-200 hover:border-slate-600 transition-all duration-300 bg-transparent"
+                  className="border-2 border-muted-foreground text-slate-300 hover:bg-slate-40 hover:text-slate-200 hover:border-muted-foreground transition-all duration-300 bg-transparent"
                 >
                   <Activity className="mr-2 w-4 h-4" />
                   View Strategies
@@ -170,7 +117,7 @@ export default function ProfixLanding() {
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-400/20 to-emerald-400/20 rounded-3xl transform rotate-6 blur-3 xl"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-200/10 to-slate-100/10 rounded-3xl transform -rotate-3"></div>
                 <Image
-                  src="/hero-profix.webp"
+                  src="/images/hero-profix.webp"
                   alt="Financial Trading Dashboard"
                   width={600}
                   height={500}
@@ -183,8 +130,8 @@ export default function ProfixLanding() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-white relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50/50 to-white"></div>
+      <section id="about" className="py-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background"></div>
         <div className="container max-w-7xl mx-auto px-4 relative">
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-3 shadow-sm">
@@ -199,14 +146,14 @@ export default function ProfixLanding() {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-4">
-              <p className="text text-slate-700 leading-relaxed">
+              <p className="text text-muted-foreground leading-relaxed">
                 At PROFIX, we specialize in navigating the dynamic world of
                 financial markets, with a focus on trading stocks, commodities,
                 forex and cryptocurrencies. With over 7 years of hands-on
                 experience, we have built a reputation for integrity, precision
                 and consistent results.
               </p>
-              <p className="text text-slate-700 leading-relaxed">
+              <p className="text text-muted-foreground leading-relaxed">
                 Profix Marketing is not your average marketing agency. Providing
                 local expertise in navigating the UAE's CFD landscape,
                 partnering with trusted platforms like ADSS & EQUITI.
@@ -217,29 +164,29 @@ export default function ProfixLanding() {
                     label: "Data-driven approach",
                     iconGradient: "from-teal-500 to-emerald-500",
                     bgColor: "bg-primary/10",
-                    textColor: "text-slate-700",
+                    textColor: "text-primary",
                     borderColor: "border-primary/15",
                   },
                   {
                     label: "Personalized strategies",
                     iconGradient: "from-indigo-500 to-purple-600",
-                    bgColor: "bg-purple-50",
+                    bgColor: "bg-purple-500/10",
                     textColor: "text-purple-700",
-                    borderColor: "border-purple-200",
+                    borderColor: "border-purple-500/15",
                   },
                   {
                     label: "Dedicated support",
                     iconGradient: "from-orange-500 to-yellow-500",
-                    bgColor: "bg-yellow-50",
+                    bgColor: "bg-yellow-500/10",
                     textColor: "text-yellow-700",
-                    borderColor: "border-yellow-200",
+                    borderColor: "border-yellow-500/15",
                   },
                   {
                     label: "Global expertise",
                     iconGradient: "from-sky-500 to-blue-600",
-                    bgColor: "bg-blue-50",
+                    bgColor: "bg-blue-500/10",
                     textColor: "text-blue-700",
-                    borderColor: "border-blue-200",
+                    borderColor: "border-blue-500/15",
                   },
                 ].map((feature, index) => (
                   <div
@@ -263,12 +210,180 @@ export default function ProfixLanding() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-500/50 to-emerald-400/50 rounded-3xl transform rotate-3 blur-2xl"></div>
               <Image
-                src="/about.webp"
+                src="/images/about.webp"
                 alt="About PROFIX"
                 width={500}
                 height={500}
                 className="relative rounded-3xl shadow-2xl hover:shadow-3xl w-full transition-all duration-500"
               />
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl font-bold mb-3">PROFIX Timeline</h3>
+              <p className="text-sm text-muted-foreground">
+                Our journey of growth and excellence
+              </p>
+            </div>
+
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-2 sm:left-1/2 transform sm:-translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary/60 to-primary/20 rounded-full"></div>
+
+              {/* Timeline Items */}
+              <div className="space-y-2">
+                {[
+                  {
+                    year: "2019",
+                    items: ["Founded", "Partnership with ADSS"],
+                    gradient: "from-emerald-500 to-teal-600",
+                    bgColor: "bg-emerald-500/5",
+                    textColor: "text-emerald-700",
+                    borderColor: "border-emerald-500/20",
+                    position: "left",
+                  },
+                  {
+                    year: "2020",
+                    items: [
+                      "200+ satisfied clients",
+                      "Crossing over 1.5M USD deposits",
+                    ],
+                    gradient: "from-blue-500 to-cyan-600",
+                    bgColor: "bg-blue-500/5",
+                    textColor: "text-blue-700",
+                    borderColor: "border-blue-500/20",
+                    position: "right",
+                  },
+                  {
+                    year: "2021",
+                    items: [
+                      "600+ satisfied clients",
+                      "Crossing over 5M USD deposits",
+                    ],
+                    gradient: "from-purple-500 to-indigo-600",
+                    bgColor: "bg-purple-500/5",
+                    textColor: "text-purple-700",
+                    borderColor: "border-purple-500/20",
+                    position: "left",
+                  },
+                  {
+                    year: "2022",
+                    items: [
+                      "Adding more tools & features",
+                      "Addition of new instruments",
+                    ],
+                    gradient: "from-orange-500 to-red-600",
+                    bgColor: "bg-orange-500/5",
+                    textColor: "text-orange-700",
+                    borderColor: "border-orange-500/20",
+                    position: "right",
+                  },
+                  {
+                    year: "2023",
+                    items: [
+                      "Partnership with EQUITI",
+                      "Gold & BTC peak earnings",
+                    ],
+                    gradient: "from-yellow-500 to-amber-600",
+                    bgColor: "bg-yellow-500/5",
+                    textColor: "text-yellow-700",
+                    borderColor: "border-yellow-500/20",
+                    position: "left",
+                  },
+                  {
+                    year: "2024",
+                    items: ["95% clients profit", "Automated trades"],
+                    gradient: "from-green-500 to-emerald-600",
+                    bgColor: "bg-green-500/5",
+                    textColor: "text-green-700",
+                    borderColor: "border-green-500/20",
+                    position: "right",
+                  },
+                  {
+                    year: "2025",
+                    items: ["New refined strategies", "BOT integrations"],
+                    gradient: "from-primary to-primary/80",
+                    bgColor: "bg-primary/5",
+                    textColor: "text-primary",
+                    borderColor: "border-primary/20",
+                    position: "left",
+                  },
+                ].map((milestone, index) => (
+                  <div
+                    key={index}
+                    className={`relative flex items-center justify-end group ${
+                      milestone.position === "left"
+                        ? "sm:justify-start"
+                        : "sm:justify-end"
+                    }`}
+                  >
+                    {/* Timeline Dot */}
+                    <div
+                      className={`absolute left-0 sm:left-1/2 transform sm:-translate-x-1/2 w-5 h-5 bg-gradient-to-r ${milestone.gradient} rounded-full border-4 border-background  z-10 group-hover:scale-125 transition-transform duration-300`}
+                    ></div>
+
+                    {/* Content Card */}
+                    <div
+                      className={`w-full sm:w-1/2 ${
+                        milestone.position === "left" ? "pl-8 sm:pr-8" : "pl-8"
+                      } group`}
+                    >
+                      <div
+                        className={`${milestone.bgColor} ${milestone.borderColor} border backdrop-blur-sm rounded-lg p-3 relative`}
+                      >
+                        {/* Year Badge */}
+                        <div
+                          className={`inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r ${milestone.gradient} text-background text-sm font-bold mb-2 shadow-sm`}
+                        >
+                          <span>{milestone.year}</span>
+                        </div>
+
+                        {/* Achievements */}
+                        <div className="">
+                          {milestone.items.map((item, itemIndex) => (
+                            <div
+                              key={itemIndex}
+                              className="flex items-start space-x-2"
+                            >
+                              <div
+                                className={`w-2 h-2 rounded-full bg-gradient-to-r ${milestone.gradient} mt-2 flex-shrink-0`}
+                              ></div>
+                              <span
+                                className={`${milestone.textColor} text-sm font-medium leading-relaxed`}
+                              >
+                                {item}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                        {/* Arrow pointing to timeline */}
+                        <div
+                          className={`absolute top-1/2 transform -translate-y-1/2 ${
+                            milestone.position === "left"
+                              ? "-left-[13px] sm:-right-[13px] sm:left-auto"
+                              : "-left-[13px]"
+                          } w-0 h-0 border-t-[12px] border-b-[12px] border-t-transparent border-b-transparent ${
+                            milestone.position === "left"
+                              ? `border-r-[12px] sm:border-l-[12px] sm:border-r-0 ${milestone.borderColor}`
+                              : `border-r-[12px] ${milestone.borderColor}`
+                          }`}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Future Vision */}
+            <div className="mt-16 text-center">
+              <div className="inline-flex items-center text-sm px-5 py-2.5 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground rounded-full shadow-lg">
+                <Sparkles className="w-4 h-4 mr-2" />
+                <span className="font-semibold">
+                  Continuing our journey of excellence...
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -303,7 +418,7 @@ export default function ProfixLanding() {
                 description:
                   "No additional charges or referral fees. Complete transparency in all our services",
                 icon: Shield,
-                gradient: "from-slate-700 to-slate-900",
+                gradient: "from-muted-foreground to-slate-900",
               },
               {
                 title: "Premium Services",
@@ -317,20 +432,20 @@ export default function ProfixLanding() {
                 description:
                   "Focus on capital preservation and sustainable growth strategies",
                 icon: BarChart3,
-                gradient: "from-slate-700 to-slate-900",
+                gradient: "from-muted-foreground to-slate-900",
               },
             ].map((card, index) => (
               <Card
                 key={index}
-                className="border-0 shadow-none bg-white group relative pt-6 mt-12"
+                className="border-0 shadow-none bg-background group relative pt-6 mt-12"
               >
                 <CardHeader className="pb-2">
                   <div className="absolute -top-14 left-10 p-3 rounded-2xl bg-muted">
                     <div className="absolute right-full top-14 rounded-full rounded-tr-none bg-muted w-6 h-6">
-                      <div className="absolute inset-0 bg-white rounded-tr-xl"></div>
+                      <div className="absolute inset-0 bg-background rounded-tr-xl"></div>
                     </div>
                     <div className="absolute left-full top-14 rounded-full rounded-tl-none bg-muted w-6 h-6">
-                      <div className="absolute inset-0 bg-white rounded-tl-xl"></div>
+                      <div className="absolute inset-0 bg-background rounded-tl-xl"></div>
                     </div>
                     <div
                       className={`w-16 h-16 relative bg-gradient-to-br ${card.gradient} rounded-xl flex items-center justify-center mx-auto`}
@@ -339,12 +454,10 @@ export default function ProfixLanding() {
                       <card.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <CardTitle className="text-base text-slate-900">
-                    {card.title}
-                  </CardTitle>
+                  <CardTitle className="text-base">{card.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {card.description}
                   </p>
                 </CardContent>
@@ -379,37 +492,37 @@ export default function ProfixLanding() {
               {
                 icon: LineChart,
                 title: "Market Insights",
+                slug: "market-insights",
                 description:
                   "Comprehensive weekly and monthly analysis reports with economic calendars and event forecasts",
-                image:
-                  "/placeholder.svg?height=200&width=300&text=Market+Analysis",
+                image: "/images/services/market-insights.webp",
                 gradient: "from-blue-500 to-cyan-600",
               },
               {
                 icon: Users,
                 title: "Client Education",
+                slug: "client-education",
                 description:
                   "Training sessions on risk management, trading strategies, and market psychology webinars",
-                image:
-                  "/placeholder.svg?height=200&width=300&text=Education+Training",
+                image: "/images/services/client-education.webp",
                 gradient: "from-emerald-500 to-teal-600",
               },
               {
                 icon: Briefcase,
                 title: "Dedicated Managers",
+                slug: "dedicated-managers",
                 description:
                   "Personal account managers providing assistance and addressing all your trading queries",
-                image:
-                  "/placeholder.svg?height=200&width=300&text=Account+Management",
+                image: "/images/services/dedicated-managers.webp",
                 gradient: "from-violet-500 to-purple-600",
               },
               {
                 icon: Star,
                 title: "Customer-Centric",
+                slug: "customer-centric",
                 description:
                   "Building trust through transparency and reliability for long-term relationships",
-                image:
-                  "/placeholder.svg?height=200&width=300&text=Customer+Support",
+                image: "/images/services/customer-centric.webp",
                 gradient: "from-orange-500 to-red-600",
               },
             ].map((service, index) => (
@@ -419,14 +532,14 @@ export default function ProfixLanding() {
               >
                 <div className="relative h-40 overflow-hidden">
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-90`}
+                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-50`}
                   ></div>
                   <Image
-                    src={service.image || "/placeholder.svg"}
+                    src={service.image || "/images/placeholder.svg"}
                     alt={service.title}
                     width={300}
                     height={200}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                   <div className="absolute top-4 left-4">
@@ -447,13 +560,24 @@ export default function ProfixLanding() {
                   </div>
 
                   <div className="flex items-center justify-between pt-2 mt-auto">
-                    <Button
+                    {/* <Button
                       variant="link"
                       size="sm"
                       className="py-1 h-auto font-medium"
                     >
                       Learn More
                       <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Button> */}
+                    <Button
+                      variant="link"
+                      size="sm"
+                      className="py-1 h-auto font-medium"
+                      asChild
+                    >
+                      <Link href={`/services/${service.slug}`}>
+                        Learn More
+                        <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Link>
                     </Button>
                     <div className="flex space-x-1">
                       {[1, 2, 3, 4, 5].map((star) => (
@@ -577,9 +701,7 @@ export default function ProfixLanding() {
                       {item.icon}
                     </div>
                     <div>
-                      <CardTitle className="text-xl text-slate-900">
-                        {item.title}
-                      </CardTitle>
+                      <CardTitle className="text-xl ">{item.title}</CardTitle>
                       <CardDescription
                         className={`${item.subtitleColor} font-semibold`}
                       >
@@ -589,7 +711,7 @@ export default function ProfixLanding() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </CardContent>
@@ -610,7 +732,7 @@ export default function ProfixLanding() {
                   description:
                     "Spread investments across various asset classes and markets",
                   icon: Globe,
-                  bgColor: "bg-rose-50/60",
+                  bgColor: "bg-rose-500/5",
                   gradient: "from-rose-500 to-pink-500",
                   iconColor: "text-white",
                 },
@@ -619,7 +741,7 @@ export default function ProfixLanding() {
                   description:
                     "Set predetermined sell prices to limit potential losses",
                   icon: Shield,
-                  bgColor: "bg-indigo-50/60",
+                  bgColor: "bg-indigo-500/5",
                   gradient: "from-indigo-500 to-violet-600",
                   iconColor: "text-white",
                 },
@@ -628,7 +750,7 @@ export default function ProfixLanding() {
                   description:
                     "Use 1:100 leverage ratio wisely to control risk exposure",
                   icon: BarChart3,
-                  bgColor: "bg-amber-50/60",
+                  bgColor: "bg-amber-500/5",
                   gradient: "from-amber-500 to-yellow-400",
                   iconColor: "text-white",
                 },
@@ -637,7 +759,7 @@ export default function ProfixLanding() {
                   description:
                     "Quarterly reviews to adjust strategies based on performance",
                   icon: Target,
-                  bgColor: "bg-sky-50/60",
+                  bgColor: "bg-sky-500/5",
                   gradient: "from-sky-500 to-blue-600",
                   iconColor: "text-white",
                 },
@@ -651,10 +773,8 @@ export default function ProfixLanding() {
                   >
                     <item.icon className={`w-6 h-6 ${item.iconColor}`} />
                   </div>
-                  <h4 className="font-bold mb-1 text-slate-900">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-slate-700 leading-relaxed">
+                  <h4 className="font-bold mb-1 ">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -665,13 +785,11 @@ export default function ProfixLanding() {
       </section>
 
       {/* MNC Tie-ups */}
-      <section className="py-16 bg-white relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50/50"></div>
+      <section className="py-16 bg-background relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/50"></div>
         <div className="container max-w-7xl mx-auto px-4 relative">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-teal-100 text-teal-800 px-3 py-1">
-              Global Partnerships{" "}
-            </Badge>
+            <Badge className="mb-3 px-3 py-1">Global Partnerships </Badge>
             <h2 className="text-3xl font-bold mb-2">Strategic Partnerships</h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Collaborating with multinational corporations for superior
@@ -683,10 +801,10 @@ export default function ProfixLanding() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="max-w-xl mx-auto space-y-4">
               <div className=""></div>
-              <h3 className="text-2xl font-bold text-slate-900">
+              <h3 className="text-2xl font-bold ">
                 Global Network & Partnerships
               </h3>
-              <p className="text-slate-700 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 With over 7 years of hands-on experience, we've built strategic
                 tie-ups with multiple multinational companies that provide
                 real-time market insights and institutional-grade data.
@@ -697,29 +815,29 @@ export default function ProfixLanding() {
                     label: "Real-time market insights",
                     iconGradient: "from-teal-500 to-emerald-500",
                     bgColor: "bg-primary/10",
-                    textColor: "text-slate-700",
+                    textColor: "text-muted-foreground",
                     borderColor: "border-primary/15",
                   },
                   {
                     label: "Institutional-grade data access",
                     iconGradient: "from-indigo-500 to-purple-600",
-                    bgColor: "bg-purple-50",
+                    bgColor: "bg-purple-500/10",
                     textColor: "text-purple-700",
-                    borderColor: "border-purple-200",
+                    borderColor: "border-purple-500/15",
                   },
                   {
                     label: "Global trend identification",
                     iconGradient: "from-orange-500 to-yellow-500",
-                    bgColor: "bg-yellow-50",
+                    bgColor: "bg-yellow-500/10",
                     textColor: "text-yellow-700",
-                    borderColor: "border-yellow-200",
+                    borderColor: "border-yellow-500/15",
                   },
                   {
                     label: "Data-driven decision making",
                     iconGradient: "from-sky-500 to-blue-600",
-                    bgColor: "bg-blue-50",
+                    bgColor: "bg-blue-500/10",
                     textColor: "text-blue-700",
-                    borderColor: "border-blue-200",
+                    borderColor: "border-blue-500/15",
                   },
                 ].map((feature, index) => (
                   <div
@@ -743,11 +861,11 @@ export default function ProfixLanding() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-200/40 to-emerald-200/40 rounded-3xl transform rotate-3 blur-xl"></div>
               <Image
-                src="/Partnerships.webp"
+                src="/images/partnerships.webp"
                 alt="Global Partnerships"
                 width={500}
                 height={400}
-                className="relative rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500"
+                className="relative object-cover w-full h-full rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500"
               />
             </div>
           </div>
@@ -757,12 +875,9 @@ export default function ProfixLanding() {
 
       {/* Team Section */}
       <section id="team" className="py-16 bg-muted relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(6,214,160,0.05),transparent_50%)]"></div>
         <div className="container max-w-7xl mx-auto px-4 relative">
           <div className="text-center mb-12">
-            <Badge className="mb-3 bg-teal-100 text-teal-800 px-3 py-1">
-              Our Team
-            </Badge>
+            <Badge className="mb-3 px-3 py-1">Our Team</Badge>
             <h2 className="text-3xl font-bold mb-2">Our Expert Team</h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Highly skilled professionals with deep expertise and shared
@@ -771,14 +886,15 @@ export default function ProfixLanding() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(6,214,160,0.05),transparent_50%)]"></div>
               <img
-                src="/team.webp"
+                src="/images/team.webp"
                 alt="Team image"
                 className="object-contain w-full rounded-2xl"
               />
             </div>
-            <div className="grid grid-cols-2 gap-px relative overflow-hidden">
+            <div className="grid grid-cols-2 gap-px relative">
               <div className="absolute inset-12 bg-gradient-to-br from-primary/20 via-primary/50 to-primary/15 blur-lg"></div>
               {[
                 {
@@ -812,7 +928,7 @@ export default function ProfixLanding() {
               ].map((item, index) => (
                 <Card
                   key={index}
-                  className="border-0 rounded-none transition-all duration-500 bg-muted/80 backdrop-blur text-center group"
+                  className="border-0 rounded-none shadow-none transition-all duration-500 bg-muted/80 backdrop-blur text-center group"
                 >
                   <CardHeader className="p-4">
                     <div
@@ -822,7 +938,7 @@ export default function ProfixLanding() {
                     </div>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
-                    <h3 className="text-base text-slate-900 font-medium mb-1">
+                    <h3 className="text-base  font-medium mb-1">
                       {item.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
@@ -903,70 +1019,7 @@ export default function ProfixLanding() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-950 text-white pt-8 pb-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-950"></div>
-        <div className="container max-w-7xl mx-auto px-4 relative">
-          <div className="grid md:grid-cols-4 gap-12">
-            <div className="space-y-6">
-              <Image
-                src="/profix-logo.png"
-                alt="PROFIX MARKETING"
-                width={180}
-                height={60}
-                className="h-12 w-auto brightness-0 invert"
-              />
-              <p className="text-slate-400 leading-relaxed text-sm">
-                Navigating financial markets with precision and expertise for
-                over 7 years.
-              </p>
-            </div>
-            {[
-              {
-                heading: "Services",
-                links: [
-                  "Forex Trading",
-                  "Stock Trading",
-                  "Cryptocurrency",
-                  "Commodities",
-                ],
-              },
-              {
-                heading: "Company",
-                links: ["About Us", "Our Team", "Strategies", "Contact"],
-              },
-              {
-                heading: "Legal",
-                links: [
-                  "Privacy Policy",
-                  "Terms of Service",
-                  "Risk Disclosure",
-                  "Compliance",
-                ],
-              },
-            ].map((section, index) => (
-              <div key={index}>
-                <h4 className="font-bold mb-4 text-white">{section.heading}</h4>
-                <ul className="space-y-2 text-slate-400">
-                  {section.links.map((link, idx) => (
-                    <li
-                      key={idx}
-                      className="hover:text-teal-400 text-sm transition-colors cursor-pointer flex items-center gap-2"
-                    >
-                      <ArrowRight size={16} />
-                      {link}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="border-t border-slate-800 mt-6 pt-4 text-center text-sm text-slate-400">
-            <p>&copy; 2024 PROFIX MARKETING. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
