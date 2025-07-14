@@ -240,7 +240,7 @@ export default function ClientEducationPage() {
       {/* Categories Section */}
       <section className="py-8 bg-background">
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {blogCategories.map((category, index) => (
               <div key={index} className="bg-primary/10 rounded-xl">
                 <CardContent className="p-6 text-center">
@@ -273,31 +273,30 @@ export default function ClientEducationPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {blogPosts.map((post, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-md transition-shadow cursor-pointer group"
-              >
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary" className="text-xs">
-                      {post.category}
-                    </Badge>
-                    <div className="flex items-center text-xs text-muted-foreground">
-                      <Clock className="w-3 h-3 mr-1" />
-                      {post.readTime}
+              <Link key={index} href="blog-detail">
+                <Card className="hover:shadow-md transition-shadow cursor-pointer group">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="secondary" className="text-xs">
+                        {post.category}
+                      </Badge>
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Clock className="w-3 h-3 mr-1" />
+                        {post.readTime}
+                      </div>
                     </div>
-                  </div>
-                  <CardTitle className="text-base group-hover:text-primary transition-colors">
-                    {post.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <User className="w-3 h-3 mr-1" />
-                    {post.author}
-                  </div>
-                </CardContent>
-              </Card>
+                    <CardTitle className="text-base group-hover:text-primary transition-colors">
+                      {post.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center text-xs text-muted-foreground">
+                      <User className="w-3 h-3 mr-1" />
+                      {post.author}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
