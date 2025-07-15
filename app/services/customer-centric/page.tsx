@@ -307,7 +307,7 @@ export default function CustomerCentricPage() {
           <h2 className="text-2xl font-bold mb-4">
             Experience Customer-Centric Trading
           </h2>
-          <p className="text-orange-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             Join thousands of traders who've discovered what it means to have a
             broker that truly cares
           </p>
