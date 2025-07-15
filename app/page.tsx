@@ -39,7 +39,7 @@ export default function ProfixLanding() {
       <Header nav />
 
       {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-black text-white">
+      <section className="relative py-24 overflow-hidden bg-background text-foreground dark">
         <img
           src="/images/hero-profix.webp"
           alt="hero image"
