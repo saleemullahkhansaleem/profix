@@ -121,13 +121,12 @@ export default function BlogDetail() {
               <h3 className="text-lg font-semibold">Key Takeaways</h3>
               <ul className="space-y-2">
                 {[
-                  "Specialised trading requires understanding asset-specific characteristics",
-                  "Forex, commodities, shares and cryptocurrencies need tailored approaches",
-                  "Strategies, analysis tools and risk management should be adjusted per asset class",
-                  "Building specialised strategies increases profit chances and limits losses",
+                  "Specialised trading requires a trader to understand the characteristics and technical details of an asset to form tailored trading techniques",
+                  "Forex, commodities, shares and cryptocurrencies are popular asset classes offered by most of the online brokers",
+                  "Your specialised trading approach should include strategies, analysis tools and risk management that are adjusted based on the asset class",
+                  "Building a specialised strategy for each type of financial products can increase your chances for profit and help you limit losses",
                 ].map((point, index) => (
-                  <li key={index} className="flex items-start space-x-2">
-                    <Dot className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                  <li key={index} className="">
                     <span className="text-sm">{point}</span>
                   </li>
                 ))}
@@ -181,33 +180,32 @@ export default function BlogDetail() {
                   major pairs attract traders that want lower spread charges and
                   less volatility in the market.
                 </p>
-
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2 text-primary" />
-                      Strategies
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Technical analysis with indicators</li>
-                      <li>• Fundamental analysis from news</li>
-                      <li>• Sentiment analysis</li>
-                      <li>• Volume and trend analysis</li>
-                    </ul>
-                  </div>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <Shield className="w-4 h-4 mr-2 text-primary" />
-                      Risk Management
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Stop loss orders</li>
-                      <li>• Risk-reward ratios</li>
-                      <li>• Position sizing</li>
-                      <li>• Hedging strategies</li>
-                    </ul>
-                  </div>
-                </div>
+                <h4 className="font-semibold">Strategies</h4>{" "}
+                <p className="text-muted-foreground leading-relaxed">
+                  Strategies used to trade currencies are based on technical
+                  analysis of price charts, fundamental analysis from news
+                  reports, and sentiment analysis.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Technical analysis is very commonly used by forex traders with
+                  indicators that help analyse volumes, trend, volatility, and
+                  directional strength to get high probability opportunities.
+                </p>
+                <h4 className="font-semibold">Risk Management</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Currency trading is highly leveraged, making the level of risk
+                  higher. Volatility of currency pairs rise around release of
+                  high impact economic reports releases, affecting the
+                  respective countries for specific currencies.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Traders should use basic and advanced risk management
+                  practices, such as using stop loss orders, maintaining a
+                  reasonable risk-reward ratio with a low-risk amount and
+                  observing appropriate position size to reduce risk exposure.
+                  Long-term forex traders also use hedging to limit risk
+                  involved in their positions.
+                </p>
               </div>
 
               {/* Commodities Trading Section */}
@@ -227,32 +225,47 @@ export default function BlogDetail() {
                   of durable goods.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2 text-primary" />
-                      Strategies
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Supply and demand analysis</li>
-                      <li>• Hedging strategies</li>
-                      <li>• Futures and options contracts</li>
-                      <li>• Portfolio diversification</li>
-                    </ul>
-                  </div>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <Shield className="w-4 h-4 mr-2 text-primary" />
-                      Risk Management
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Diversification strategies</li>
-                      <li>• Position sizing</li>
-                      <li>• Economic calendar monitoring</li>
-                      <li>• Emotional discipline</li>
-                    </ul>
-                  </div>
-                </div>
+                <h4 className="font-semibold">Strategies</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Traders in the online commodity markets usually speculate on
+                  the prices either to chase profit opportunities, hedge against
+                  price risk or diversify their portfolio. Traders can combine
+                  fundamental, technical and sentiment analysis tools to
+                  identify price trends, potential reversal points and
+                  overbought and oversold conditions.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Hedging strategy helps traders to cover for losses when prices
+                  are adversely changing against their commodity positions.
+                  Futures and options contracts are often used by traders
+                  choosing this strategy.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  As commodities are highly impacted by supply and demand, it’s
+                  important for traders to understand these concepts and use
+                  several analysis tools and approaches to identify trade
+                  opportunities. Economic calendars are useful tools for
+                  commodity traders as reports related to production and
+                  consumption can provide useful insights.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Commodities have low correlation with the stock markets and
+                  fixed income securities, making them a good option for
+                  portfolio diversification. Trader mostly turns to commodities
+                  during times of high volatility and instability in the forex
+                  and stock markets.
+                </p>
+                <h4 className="font-semibold">Risk Management</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Commodity trading involves risks as factors like market
+                  volatility, geopolitical events and weather conditions can
+                  cause sudden and significant price movements. To reduce risk,
+                  traders should use risk management strategies, such as
+                  diversification, position sizing and stop loss orders. It’s
+                  also important for commodity traders to keep updated about key
+                  data releases and maintain emotional discipline to make
+                  informed decisions in the market.
+                </p>
               </div>
 
               {/* Shares Trading Section */}
@@ -273,32 +286,58 @@ export default function BlogDetail() {
                   investors from unfair trading deals.
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-4 mt-6">
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-primary">
-                      Value Investing
-                    </h4>
-                    <p className="text-xs text-muted-foreground">
-                      Selecting stocks trading below their intrinsic value
-                    </p>
-                  </div>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-primary">
-                      Growth Investing
-                    </h4>
-                    <p className="text-xs text-muted-foreground">
-                      Focusing on companies with strong growth potential
-                    </p>
-                  </div>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 text-primary">
-                      Momentum Trading
-                    </h4>
-                    <p className="text-xs text-muted-foreground">
-                      Trading assets with strong recent performance
-                    </p>
-                  </div>
-                </div>
+                <h4 className="font-semibold">Strategies</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Strategies often used in stock markets are value and growth
+                  investing and momentum and day trading. Traders can choose
+                  which strategy matches their financial objectives.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Value investing involves selecting stocks or other assets that
+                  appear to be trading at a price below their intrinsic value.
+                  The premise of value investing is based on the belief that
+                  markets can sometimes misprice assets, leading to
+                  opportunities for investors to buy undervalued securities and
+                  potentially profit as their prices move closer to their
+                  intrinsic value over time.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Growth investing is an investment strategy focused on
+                  identifying and investing in companies that show strong
+                  potential for above-average growth in their earnings, revenue,
+                  or market share. Unlike value investing, which seeks
+                  undervalued assets, growth investing prioritises companies
+                  with promising prospects for expansion and increasing
+                  profitability, even if their current stock prices may seem
+                  relatively high compared to traditional valuation metrics.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Momentum trading is a strategy that involves trading assets
+                  that have demonstrated strong recent performance and selling
+                  assets that have exhibited poor recent performance, with the
+                  expectation that the trend will continue in the short to
+                  medium term. This strategy is based on the belief that assets
+                  that have been performing well are more likely to continue
+                  performing well, and vice versa.
+                </p>
+                <h4 className="font-semibold">Risk Management</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Shares traders should combine fundamental and technical
+                  analysis to spot opportunities and mitigate risk.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Fundamental analysis, using tools such as earnings reports,
+                  economic indicators and market news, will help traders to find
+                  potential profitable trade ideas. Technical analysis tools
+                  like support and resistance levels are useful in identifying
+                  entry, exit and stop loss points for those trades, helping to
+                  time the trades correctly and manage risk.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Diversification across different industries and geographical
+                  locations, position sizing and stop loss orders are popular
+                  risk management tools used in shares trading.
+                </p>
               </div>
 
               {/* Crypto Trading Section */}
@@ -311,50 +350,45 @@ export default function BlogDetail() {
                   are platforms that allow trading only during the weekdays.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2 text-primary" />
-                      Strategies
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Day trading and scalping</li>
-                      <li>• Swing trading</li>
-                      <li>• News trading</li>
-                      <li>• Long-term holding</li>
-                    </ul>
-                  </div>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2 flex items-center">
-                      <Shield className="w-4 h-4 mr-2 text-primary" />
-                      Risk Management
-                    </h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Stop loss orders</li>
-                      <li>• Portfolio diversification</li>
-                      <li>• Advanced risk tools</li>
-                      <li>• Capital protection</li>
-                    </ul>
-                  </div>
-                </div>
+                <h4 className="font-semibold">Strategies</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Trading strategies for crypto can be day trading to investing
+                  depending on the trader’s choice. Popular crypto trading
+                  strategies include short-term approaches like day and swing
+                  trading and scalping. However, some traders can choose to hold
+                  their crypto positions long-term, regardless of market
+                  volatility.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  News trading is also a popular strategy as crypto prices are
+                  highly sensitive to news, regulatory updates and market
+                  sentiment. Traders using news trading typically open positions
+                  either when the news has been released or just before if they
+                  are confident in predicting the outcome. Using fundamental and
+                  sentiment analysis can help traders to plan their positions
+                  and risk management.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Crypto traders also rely on technical indicators and price
+                  charts.
+                </p>
+                <h4 className="font-semibold">Risk Management</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  With crypto trading, it’s important to highlight the element
+                  of risk because of, for example high volatility and uncertain
+                  regulatory framework. Therefore, it’s important for crypto
+                  traders to always use risk management and choose advanced
+                  strategies and tools to protect their capital against
+                  significant losses.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Stop loss orders are valuable tools for crypto traders as they
+                  instruct the broker to automatically close a position that
+                  takes an unfavourable move. Crypto traders should also
+                  consider diversifying their portfolio, including also products
+                  from other asset classes that tend to involve less risk.
+                </p>
               </div>
-
-              {/* Conclusion */}
-              <Card className="bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold">Conclusion</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Building specialised trading strategies for different asset
-                    classes is crucial for long-term trading success. Each asset
-                    class—forex, commodities, shares, and cryptocurrencies—has
-                    unique characteristics that require tailored approaches to
-                    strategy, analysis, and risk management. Understanding these
-                    differences and adapting your trading methods accordingly
-                    will significantly improve your chances of profitable
-                    trading while helping you manage and limit potential losses.
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
