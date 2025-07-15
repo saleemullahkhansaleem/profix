@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "PROFIX MARKETING - Expert Financial Trading",
   description:
     "Navigate financial markets with expert precision. 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
-  metadataBase: new URL("https://www.profixmarketing.vercel.app"),
+  metadataBase: new URL("https://profixmarketing.vercel.app"),
   // metadataBase: new URL("https://www.profixmarketing.com"),
   generator: "Next.js",
   applicationName: "PROFIX MARKETING",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Trading UAE",
   ],
   authors: [
-    { name: "PROFIX MARKETING", url: "https://www.profixmarketing.vercel.app" },
+    { name: "PROFIX MARKETING", url: "https://profixmarketing.vercel.app" },
     // { name: "PROFIX MARKETING", url: "https://www.profixmarketing.com" },
   ],
   creator: "PROFIX MARKETING",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "PROFIX MARKETING - Expert Financial Trading",
     description:
       "Explore expert trading strategies in Forex, Stocks, Commodities, and Crypto with Profix Marketing. Trusted by clients in UAE and beyond.",
-    url: "https://www.profixmarketing.vercel.app",
+    url: "https://profixmarketing.vercel.app",
     // url: "https://www.profixmarketing.com",
     siteName: "PROFIX MARKETING",
     images: [
