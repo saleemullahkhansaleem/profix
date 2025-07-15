@@ -6,22 +6,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: "PROFIX MARKETING - Expert Financial Trading",
-//   description:
-//     "Navigate financial markets with expert precision. 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
-//   icons: {
-//     icon: "/favicon.ico",
-//     shortcut: "/favicon.ico",
-//     apple: "/apple-touch-icon.png",
-//   },
-// };
-
 export const metadata: Metadata = {
   title: "PROFIX MARKETING - Expert Financial Trading",
   description:
     "Navigate financial markets with expert precision. 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
-  metadataBase: new URL("https://www.profixmarketing.com"), // Change to your actual domain
+  metadataBase: new URL("https://www.profixmarketing.com"),
   generator: "Next.js",
   applicationName: "PROFIX MARKETING",
   referrer: "origin-when-cross-origin",

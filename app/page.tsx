@@ -645,7 +645,7 @@ export default function ProfixLanding() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-primary/10 to-background/70" />
-        <div className="container max-w-7xl mx-auto px-4 relative">
+        <div className="container max-w-7xl mx-auto px-4 relative overflow-hidden">
           <div className="absolute w-80 h-80 rounded-full bg-primary/40 top-40 left-1/2 blur-3xl"></div>
           <div className="text-center mb-12">
             <Badge variant="outline" className="mb-3 shadow-sm">
@@ -982,7 +982,8 @@ export default function ProfixLanding() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 px-10 py-4"
-              asChild>
+                asChild
+              >
                 <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
                   <Sparkles className="mr-2 w-4 h-4" />
                   Start Trading Now
