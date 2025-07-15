@@ -999,7 +999,7 @@ export default function ProfixLanding() {
                 Schedule Consultation
               </Button>
             </div>
-            <div className="flex gap-8 justify-center pt-10">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-10">
               {[
                 {
                   label: "+971 12 345 6789",
@@ -1016,7 +1016,7 @@ export default function ProfixLanding() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center space-x-3 text-slate-300 group"
+                  className="flex items-center space-x-2 text-slate-300 group"
                 >
                   <div className="w-8 h-8 bg-teal-500/20 rounded-full flex items-center justify-center group-hover:bg-teal-500/30 transition-colors duration-300">
                     <item.icon className="w-4 h-4" />

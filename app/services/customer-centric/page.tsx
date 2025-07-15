@@ -177,7 +177,7 @@ export default function CustomerCentricPage() {
                   That's why we've created a client experience that's:
                 </p>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                   {[
                     {
                       label: "Fast",
