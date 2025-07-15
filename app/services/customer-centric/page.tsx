@@ -231,9 +231,11 @@ export default function CustomerCentricPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Button size="lg" className="">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Get Started Today
+                <Button size="lg" className="" asChild>
+                  <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Get Started Today
+                  </Link>
                 </Button>
                 <Button size="lg" variant="outline">
                   <Mail className="w-4 h-4 mr-2" />
@@ -255,7 +257,7 @@ export default function CustomerCentricPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {[
               {
                 name: "Ahmed K.",
@@ -263,14 +265,14 @@ export default function CustomerCentricPage() {
                 text: "Finally found a broker that actually cares about their clients. My account manager is always available and genuinely helpful.",
               },
               {
-                name: "Sarah M.",
-                location: "London, UK",
-                text: "The transparency is refreshing. No hidden fees, clear communication, and they actually want me to succeed.",
+                name: "Fatima A.",
+                location: "Abu Dhabi, UAE",
+                text: "Profix has truly elevated my trading experience. Their local insight and dedicated support team are unmatched.",
               },
               {
-                name: "Michael R.",
-                location: "New York, USA",
-                text: "Best customer service I've experienced in trading. They treat you like a person, not just an account number.",
+                name: "Zayd R.",
+                location: "Dubai, UAE",
+                text: "Transparent, responsive, and highly professional. I’ve seen real growth in my investments since joining them.",
               },
             ].map((testimonial, index) => (
               <Card key={index} className="hover:shadow-md transition-shadow">
@@ -309,8 +311,10 @@ export default function CustomerCentricPage() {
             Join thousands of traders who've discovered what it means to have a
             broker that truly cares
           </p>
-          <Button size="lg" variant="secondary">
-            Start Your Journey Today
+          <Button size="lg" variant="secondary" asChild>
+            <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
+              Start Your Journey Today
+            </Link>
           </Button>
         </div>
       </section>

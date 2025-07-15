@@ -67,14 +67,20 @@ export default function ProfixLanding() {
                   platforms tailored for your day-to day trades & long term
                   investment opportunities in financial markets
                 </p>
+                <p className="text- text-teal-400 leading-relaxed max-w-2xl">
+                  Get your customised trading account on SCA related platforms
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-slate-200 to-slate-100 hover:from-slate-100 hover:to-white text-black shadow-xl hover:shadow-2xl transition-all duration-300"
+                  asChild
                 >
-                  Start Trading Today
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
+                    Start Trading Today
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
@@ -88,28 +94,28 @@ export default function ProfixLanding() {
               <div className="grid grid-cols-3 gap-6 pt-6">
                 <div className="text-center group">
                   <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                    200+
+                    1,200+
                   </div>
                   <div className="text-slate-400 text-sm font-medium">
-                    Trusted Clients
+                    Satisfied Clients
                   </div>
                 </div>
                 <div className="text-center group">
                   <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                    93%
+                    800+
                   </div>
                   <div className="text-slate-400 text-sm font-medium">
-                    Satisfaction Rate
+                    Active Traders
                   </div>
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
+                {/* <div className="text-center group">
+                  <div className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-300">
                     6-12%
                   </div>
                   <div className="text-slate-400 text-sm font-medium">
                     Avg. Profitability
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="relative lg:col-span-5">
@@ -680,7 +686,7 @@ export default function ProfixLanding() {
                 subtitleColor: "text-yellow-600",
               },
               {
-                title: "Hedging Strategy",
+                title: "Bot or Automated Strategy",
                 subtitle: "Market uncertainty protection",
                 description:
                   "Protect investments by holding long positions in safe-haven assets while taking short positions in riskier instruments.",
@@ -969,17 +975,19 @@ export default function ProfixLanding() {
               Trading Journey?
             </h2>
             <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed">
-              Join 200+ satisfied clients and experience the PROFIX advantage
+              Join 1,200+ satisfied clients and experience the PROFIX advantage
               with our proven strategies and expert guidance
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-600 hover:to-emerald-700 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 px-10 py-4"
-              >
-                <Sparkles className="mr-2 w-4 h-4" />
-                Start Trading Now
-                <ArrowRight className="ml-2 w-4 h-4" />
+              asChild>
+                <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
+                  <Sparkles className="mr-2 w-4 h-4" />
+                  Start Trading Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
               </Button>
               <Button
                 size="lg"

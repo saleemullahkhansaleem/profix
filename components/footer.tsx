@@ -16,8 +16,8 @@ export default function Footer() {
               className="h-12 w-auto brightness-0 invert"
             />
             <p className="text-slate-400 leading-relaxed text-sm">
-              Navigating financial markets with precision and expertise for over
-              7 years.
+              Trusted by over 1,200 satisfied clients, with more than 800 active
+              traders confidently navigating the markets with us.
             </p>
           </div>
           {[
