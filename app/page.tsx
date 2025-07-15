@@ -43,7 +43,7 @@ export default function ProfixLanding() {
         <img
           src="/images/hero-profix.webp"
           alt="hero image"
-          className="absolute inset-0 object-cover w-full opacity-50"
+          className="absolute inset-0 object-cover w-full h-full opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-teal-600/50 via-black to-muted-foreground/50"></div>
 
@@ -127,7 +127,7 @@ export default function ProfixLanding() {
                   alt="Financial Trading Dashboard"
                   width={600}
                   height={500}
-                  className="relative  rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-500"
+                  className="relative object-cover w-full h-full rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-500"
                 />
               </div>
             </div>
