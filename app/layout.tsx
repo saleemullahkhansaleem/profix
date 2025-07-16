@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "PROFIX MARKETING",
     images: [
       {
-        url: "https://profixmarketing.vercel.app/og-image.png", // must be absolute
+        url: "https://profixmarketing.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "PROFIX MARKETING - Expert Financial Trading",
@@ -100,9 +100,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Header /> */}
           {children}
-          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

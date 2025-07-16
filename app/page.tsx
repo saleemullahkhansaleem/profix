@@ -1,16 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import {
-  TrendingUp,
-  Shield,
-  Users,
-  BarChart3,
-  Target,
-  Award,
-  CheckCircle,
-  Briefcase,
-} from "lucide-react";
-import Image from "next/image";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import {
