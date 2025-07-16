@@ -687,9 +687,9 @@ export default function ProfixLanding() {
               },
               {
                 title: "Bot or Automated Strategy",
-                subtitle: "Market uncertainty protection",
+                subtitle: "Stable & emotion-free execution",
                 description:
-                  "Protect investments by holding long positions in safe-haven assets while taking short positions in riskier instruments.",
+                  "Safeguard your capital with our proven automated trading solutions  engineered for stability, consistency, and peace of mind.",
                 icon: <PieChart className="w-8 h-8 text-white" />,
                 gradient: "from-sky-500 to-blue-600",
                 subtitleColor: "text-blue-600",
@@ -731,7 +731,7 @@ export default function ProfixLanding() {
             <h3 className="text-3xl font-bold mb-10 text-primary relative">
               Risk Management Strategies
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-1 relative">
               {[
                 {
                   title: "Diversification",
@@ -769,13 +769,22 @@ export default function ProfixLanding() {
                   gradient: "from-sky-500 to-blue-600",
                   iconColor: "text-white",
                 },
+                {
+                  title: "Performance Track",
+                  description:
+                    "Performance tracked with weekly, monthly & quarterly audits for consistent quality and improvement in delivered results.",
+                  icon: Activity,
+                  bgColor: "bg-emerald-500/5",
+                  gradient: "from-emerald-500 to-teal-600",
+                  iconColor: "text-white",
+                },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className={`${item.bgColor} backdrop-blur p-6 group transition-all duration-300/60`}
+                  className={`${item.bgColor} backdrop-blur p-4 group transition-all duration-300/60`}
                 >
                   <div
-                    className={`w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-xl flex justify-center items-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 bg-gradient-to-br ${item.gradient} rounded-xl flex justify-center items-center mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <item.icon className={`w-6 h-6 ${item.iconColor}`} />
                   </div>
@@ -804,7 +813,7 @@ export default function ProfixLanding() {
           </div>
 
           {/* <div className="bg-gradient-to-br from-teal-50/80 via-white to-emerald-50/80 rounded-3xl p-16 shadow-2xl backdrop-blur-sm"> */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="max-w-xl mx-auto space-y-4">
               <div className=""></div>
               <h3 className="text-2xl font-bold ">
@@ -815,7 +824,7 @@ export default function ProfixLanding() {
                 tie-ups with multiple multinational companies that provide
                 real-time market insights and institutional-grade data.
               </p>
-              <div className="grid sm:grid-cols-2 gap-y-4 gap-x-10 max-w-max mx-auto pt-6">
+              <div className="grid xl:grid-cols-2 gap-y-4 gap-x-10 max-w-max mx-auto pt-6">
                 {[
                   {
                     label: "Real-time market insights",
@@ -864,7 +873,7 @@ export default function ProfixLanding() {
                 ))}
               </div>
             </div>
-            <div className="relative">
+            <div className="relative max-w-xl mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-teal-200/40 to-emerald-200/40 rounded-3xl transform rotate-3 blur-xl"></div>
               <Image
                 src="/images/partnerships.webp"
