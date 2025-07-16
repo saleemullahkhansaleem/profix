@@ -1,5 +1,5 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   description:
     "Navigate financial markets with expert precision. 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
   metadataBase: new URL("https://profixmarketing.vercel.app"),
-  // metadataBase: new URL("https://www.profixmarketing.com"),
   generator: "Next.js",
   applicationName: "PROFIX MARKETING",
   referrer: "origin-when-cross-origin",
@@ -28,7 +27,6 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: "PROFIX MARKETING", url: "https://profixmarketing.vercel.app" },
-    // { name: "PROFIX MARKETING", url: "https://www.profixmarketing.com" },
   ],
   creator: "PROFIX MARKETING",
   publisher: "PROFIX MARKETING",
@@ -46,11 +44,10 @@ export const metadata: Metadata = {
     description:
       "Explore expert trading strategies in Forex, Stocks, Commodities, and Crypto with Profix Marketing. Trusted by clients in UAE and beyond.",
     url: "https://profixmarketing.vercel.app",
-    // url: "https://www.profixmarketing.com",
     siteName: "PROFIX MARKETING",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://profixmarketing.vercel.app/og-image.png", // must be absolute
         width: 1200,
         height: 630,
         alt: "PROFIX MARKETING - Expert Financial Trading",
@@ -65,7 +62,7 @@ export const metadata: Metadata = {
     description:
       "7+ years of expertise in Forex, Stocks, Crypto & CFD trading. Navigate financial markets with confidence.",
     creator: "https://mrsaleem.vercel.app/",
-    images: ["/og-image.png"],
+    images: ["https://profixmarketing.vercel.app/og-image.png"],
   },
   robots: {
     index: true,
@@ -78,10 +75,15 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#00cc88",
   colorScheme: "light dark",
-  viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

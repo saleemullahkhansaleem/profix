@@ -16,6 +16,7 @@ export default function Header({ nav = false }: { nav?: Boolean }) {
                 alt="PROFIX MARKETING"
                 width={180}
                 height={52}
+                priority
                 className="h-12 w-auto dark:invert dark:brightness-0"
               />
             </Link>
