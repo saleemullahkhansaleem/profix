@@ -6,3 +6,4 @@ export { default as StrategiesSection } from "./strategies-section";
 export { default as TeamSection } from "./team-section";
 export { default as PartnershipsSection } from "./partnerships-section";
 export { default as WhyChooseUsSection } from "./why-choose-us-section";
+export { default as TradingPlatformsSection } from "./trading-platforms-section";

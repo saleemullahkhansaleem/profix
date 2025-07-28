@@ -1,5 +1,7 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { partners } from "@/lib/data/partners";
 
 export default function Footer() {
   return (
@@ -22,25 +24,52 @@ export default function Footer() {
           </div>
           {[
             {
-              heading: "Services",
+              heading: "Contact",
               links: [
-                "Forex Trading",
-                "Stock Trading",
-                "Cryptocurrency",
-                "Commodities",
+                {
+                  label: "info@profixmarketing.com",
+                  href: "mailto:info@profixmarketing.com",
+                },
+                { label: "Dubai, UAE" },
+                { label: "Abu Dhabi, UAE" },
+                { label: "Sharjah, UAE" },
+                { label: "Ajman, UAE" },
               ],
             },
             {
-              heading: "Company",
-              links: ["About Us", "Our Team", "Strategies", "Contact"],
+              heading: "Services",
+              links: [
+                {
+                  label: "Client Education",
+                  href: "/services/client-education",
+                },
+                { label: "Market Insights", href: "/services/market-insights" },
+                {
+                  label: "Customer-Centric",
+                  href: "/services/customer-centric",
+                },
+                {
+                  label: "Dedicated Managers",
+                  href: "/services/dedicated-managers",
+                },
+              ],
             },
             {
               heading: "Legal",
               links: [
-                "Privacy Policy",
-                "Terms of Service",
-                "Risk Disclosure",
-                "Compliance",
+                {
+                  label: "Privacy Policy",
+                  href: "/legal/privacy-policy",
+                },
+                {
+                  label: "Terms of Service",
+                  href: "/legal/terms-of-service",
+                },
+                {
+                  label: "Risk Disclosure",
+                  href: "/legal/risk-disclosure",
+                },
+                { label: "Compliance", href: "/legal/compliance" },
               ],
             },
           ].map((section, index) => (
@@ -52,14 +81,63 @@ export default function Footer() {
                     key={idx}
                     className="hover:text-teal-400 text-sm transition-colors cursor-pointer flex items-center gap-2"
                   >
-                    <ArrowRight size={16} />
-                    {link}
+                    {section.heading === "Contact" ? (
+                      link.label.includes("@") ? (
+                        <Mail size={16} />
+                      ) : (
+                        <MapPin size={16} />
+                      )
+                    ) : (
+                      <ArrowRight size={16} />
+                    )}
+                    {"href" in link && link.href ? (
+                      <Link href={link.href}>{link.label}</Link>
+                    ) : (
+                      link.label
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
           ))}
         </div>
+
+        {/* Company Logos Section */}
+        <div className="border-t border-slate-800 mt-8 pt-8">
+          <div className="text-center mb-6">
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              {partners.map((partner) => (
+                <div key={partner.id} className="group">
+                  {partner.href ? (
+                    <Link
+                      href={partner.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block hover:opacity-100 transition-opacity duration-300"
+                    >
+                      <Image
+                        src={partner.logo}
+                        alt={partner.alt}
+                        width={96}
+                        height={48}
+                        className="h-12 w-auto"
+                      />
+                    </Link>
+                  ) : (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.alt}
+                      width={96}
+                      height={48}
+                      className="h-12 w-auto"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-slate-800 mt-6 pt-4 text-center text-sm text-slate-400">
           <p>&copy; 2024 PROFIX MARKETING. All rights reserved.</p>
         </div>

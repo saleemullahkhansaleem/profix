@@ -64,7 +64,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-20 max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold mb-3">PROFIX Timeline</h3>
             <p className="text-sm text-muted-foreground">

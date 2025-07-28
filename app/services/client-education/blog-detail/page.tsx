@@ -22,14 +22,11 @@ import {
   Dot,
 } from "lucide-react";
 import Link from "next/link";
-import Header from "@/components/header";
+
 
 export default function BlogDetail() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <Header />
-
       {/* Breadcrumb */}
       <section className="py-4 bg-muted/30">
         <div className="container max-w-7xl mx-auto px-4">

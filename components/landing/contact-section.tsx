@@ -21,8 +21,8 @@ export default function ContactSection() {
             Trading Journey?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Join 1,200+ satisfied clients and experience the PROFIX advantage
-            with our proven strategies and expert guidance
+            Join more than 1,200 satisfied clients and experience the PROFIX
+            advantage with our proven strategies and expert guidance
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
             <Button
@@ -45,36 +45,8 @@ export default function ContactSection() {
               Schedule Consultation
             </Button>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-10">
-            {contacts.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center space-x-2 text-slate-300 group"
-              >
-                <div className="w-8 h-8 bg-teal-500/20 rounded-full flex items-center justify-center group-hover:bg-teal-500/30 transition-colors duration-300">
-                  <item.icon className="w-4 h-4" />
-                </div>
-                <span className="text-sm">{item.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
   );
 }
-
-const contacts = [
-  {
-    label: "+971 12 345 6789",
-    icon: Phone,
-  },
-  {
-    label: "info@profixmarketing.com",
-    icon: Mail,
-  },
-  {
-    label: "Dubai, UAE",
-    icon: MapPin,
-  },
-];

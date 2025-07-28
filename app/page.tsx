@@ -9,6 +9,7 @@ import {
   StrategiesSection,
   TeamSection,
   WhyChooseUsSection,
+  TradingPlatformsSection,
 } from "@/components/landing";
 
 export default function ProfixLanding() {
@@ -19,6 +20,7 @@ export default function ProfixLanding() {
       <AboutSection />
       <WhyChooseUsSection />
       <ServicesSection />
+      <TradingPlatformsSection />
       <StrategiesSection />
       <PartnershipsSection />
       <TeamSection />

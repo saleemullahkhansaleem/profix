@@ -17,12 +17,10 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/header";
 
 export default function CustomerCentricPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-b from-primary/5 via-background to-muted/30">
         <div className="container max-w-7xl mx-auto px-4">

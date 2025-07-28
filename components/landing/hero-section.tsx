@@ -1,10 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Award, Activity, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
+import { useDynamicCounter } from "@/hooks/use-dynamic-counter";
 
 export default function HeroSection() {
+  const { scrollToSection } = useSmoothScroll();
+
+  // Dynamic counters that increase by one every day starting from today
+  const satisfiedClientsCount = useDynamicCounter(1200);
+  const activeTradersCount = useDynamicCounter(800);
+
   return (
     <section className="relative py-24 overflow-hidden bg-background text-foreground dark">
       <img
@@ -35,7 +45,7 @@ export default function HeroSection() {
                 investment opportunities in financial markets
               </p>
               <p className="text- text-teal-400 leading-relaxed max-w-2xl">
-                Get your customised trading account on SCA related platforms
+                Get your customised trading account on SCA regulated platforms
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -53,6 +63,7 @@ export default function HeroSection() {
                 size="lg"
                 variant="outline"
                 className="border-2 border-muted-foreground text-slate-300 hover:bg-slate-40 hover:text-slate-200 hover:border-muted-foreground transition-all duration-300 bg-transparent"
+                onClick={() => scrollToSection("strategies")}
               >
                 <Activity className="mr-2 w-4 h-4" />
                 View Strategies
@@ -61,7 +72,7 @@ export default function HeroSection() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6">
               <div className="text-center group">
                 <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                  1,200+
+                  {satisfiedClientsCount.toLocaleString()}+
                 </div>
                 <div className="text-slate-400 text-sm font-medium">
                   Satisfied Clients
@@ -69,7 +80,7 @@ export default function HeroSection() {
               </div>
               <div className="text-center group">
                 <div className="text-2xl font-bold bg-gradient-to-r from-teal-400 to-emerald-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
-                  800+
+                  {activeTradersCount.toLocaleString()}+
                 </div>
                 <div className="text-slate-400 text-sm font-medium">
                   Active Traders

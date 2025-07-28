@@ -107,7 +107,7 @@ const strategies = [
     title: "1% Risk Management Strategy",
     subtitle: "15–18% average monthly return",
     description:
-      "Preserve capital while achieving consistent growth by risking maximum 1% of account balance per trade. Minimizes losses for long-term sustainability.",
+      "Preserve capital while achieving consistent growth by risking maximum 1% of account balance every day. Minimizes losses for long-term sustainability.",
     icon: <Shield className="w-8 h-8 text-white" />,
     gradient: "from-teal-500 to-emerald-600",
     subtitleColor: "text-emerald-600",
@@ -131,7 +131,7 @@ const strategies = [
     subtitleColor: "text-yellow-600",
   },
   {
-    title: "Bot or Automated Strategy",
+    title: "Automated Bot Strategy",
     subtitle: "Stable & emotion-free execution",
     description:
       "Safeguard your capital with our proven automated trading solutions  engineered for stability, consistency, and peace of mind.",

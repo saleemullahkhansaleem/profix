@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import Header from "@/components/header";
 
 export default function ClientEducationPage() {
   const blogCategories = [
@@ -195,7 +194,6 @@ export default function ClientEducationPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
       {/* Hero Section */}
       <section className="py-12 bg-gradient-to-b from-primary/5 via-background to-muted/30">
         <div className="container max-w-7xl mx-auto px-4">
