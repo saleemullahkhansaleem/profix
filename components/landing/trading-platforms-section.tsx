@@ -110,9 +110,7 @@ export default function TradingPlatformsSection() {
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between">
                     <CardTitle
-                      className={`text-lg font-bold ${getTextColor(
-                        platform.color.primary
-                      )}`}
+                      className={`text-lg font-bold ${platform.color.text}`}
                     >
                       {platform.name}
                     </CardTitle>

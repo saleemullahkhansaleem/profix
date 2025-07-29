@@ -15,6 +15,7 @@ import {
   CheckCircle,
   Phone,
   Mail,
+  MessageSquare,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,10 +51,12 @@ export default function DedicatedManagersPage() {
                 understands your goals and trading preferences.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="default">Get Your Manager</Button>
-                <Button size="default" variant="outline">
-                  Learn More
+                <Button size="default">
+                  <MessageCircle /> Get Your Manager
                 </Button>
+                {/* <Button size="default" variant="outline">
+                  Learn More
+                </Button> */}
               </div>
             </div>
             <div className="relative">
@@ -192,7 +195,7 @@ export default function DedicatedManagersPage() {
             </div>
 
             {/* Our Team of Managers */}
-            <div className="mb-12">
+            <div>
               <h2 className="text-2xl font-bold mb-6 text-center">
                 Our Team of Managers
               </h2>
@@ -226,7 +229,7 @@ export default function DedicatedManagersPage() {
             </div>
 
             {/* Want to Connect */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <h2 className="text-2xl font-bold mb-4">Want to Connect?</h2>
               <p className="text-muted-foreground mb-6">
                 If you're not yet assigned a manager, simply contact us or
@@ -244,7 +247,7 @@ export default function DedicatedManagersPage() {
                   Register Account
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -260,7 +263,7 @@ export default function DedicatedManagersPage() {
             your side
           </p>
           <Button size="lg" variant="secondary">
-            Get Your Dedicated Manager Today
+            <MessageCircle /> Get Your Dedicated Manager Today
           </Button>
         </div>
       </section>

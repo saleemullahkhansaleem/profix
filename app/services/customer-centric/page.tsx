@@ -49,9 +49,13 @@ export default function CustomerCentricPage() {
                 focused on delivering long-term value.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="default">Experience the Difference</Button>
+                <Button size="default" asChild>
+                  <Link href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992">
+                    Get Start Today
+                  </Link>
+                </Button>
                 <Button size="default" variant="outline">
-                  Talk to Us
+                  <MessageCircle /> Talk to Us
                 </Button>
               </div>
             </div>

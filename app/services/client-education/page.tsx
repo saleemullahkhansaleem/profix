@@ -303,26 +303,6 @@ export default function ClientEducationPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <section className="py-12 bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-        <div className="container max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            Stay Updated with Trading Insights
-          </h2>
-          <p className="text-emerald-100 mb-6 max-w-2xl mx-auto">
-            Get the latest trading tips, market analysis, and educational
-            content delivered to your inbox
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
-            <Input
-              placeholder="Enter your email"
-              className="bg-white/10 border-white/20 text-white placeholder:text-white/70"
-            />
-            <Button variant="secondary">Subscribe</Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

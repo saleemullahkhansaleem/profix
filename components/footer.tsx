@@ -103,7 +103,7 @@ export default function Footer() {
         </div>
 
         {/* Company Logos Section */}
-        <div className="border-t border-slate-800 mt-8 pt-8">
+        <div className="border-t border-slate-800 mt-8 pt-6">
           <div className="text-center mb-6">
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {partners.map((partner) => (
