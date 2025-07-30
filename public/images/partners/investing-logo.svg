@@ -1,0 +1,21 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" rx="8" fill="#1e293b"/>
+  <!-- Investing.com Logo Design -->
+  <g transform="translate(10, 15)">
+    <!-- Chart icon -->
+    <path d="M5 35 L15 25 L25 30 L35 15 L45 20 L55 5" stroke="#3b82f6" stroke-width="2" fill="none"/>
+    <path d="M5 35 L15 25 L25 30 L35 15 L45 20 L55 5 L55 35 Z" fill="url(#chartGradient)" opacity="0.3"/>
+
+    <!-- Investing.com text -->
+    <text x="65" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">Investing</text>
+    <text x="65" y="25" font-family="Arial, sans-serif" font-size="8" fill="#64748b">.com</text>
+
+    <!-- Gradient definition -->
+    <defs>
+      <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8"/>
+        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.1"/>
+      </linearGradient>
+    </defs>
+  </g>
+</svg>

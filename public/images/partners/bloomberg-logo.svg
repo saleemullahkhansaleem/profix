@@ -1,0 +1,31 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" rx="8" fill="#1e293b"/>
+  <!-- Bloomberg Logo Design -->
+  <g transform="translate(10, 15)">
+    <!-- Bloomberg terminal icon -->
+    <rect x="5" y="5" width="25" height="15" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <rect x="6" y="6" width="23" height="13" fill="#1e293b"/>
+
+    <!-- Terminal screen content -->
+    <rect x="8" y="8" width="19" height="1" fill="#10b981"/>
+    <rect x="8" y="10" width="14" height="1" fill="#10b981"/>
+    <rect x="8" y="12" width="17" height="1" fill="#10b981"/>
+    <rect x="8" y="14" width="11" height="1" fill="#10b981"/>
+    <rect x="8" y="16" width="15" height="1" fill="#10b981"/>
+
+    <!-- Bloomberg text -->
+    <text x="35" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">Bloomberg</text>
+
+    <!-- Financial data indicators -->
+    <circle cx="35" cy="22" r="1.5" fill="#10b981"/>
+    <circle cx="38" cy="22" r="1.5" fill="#ef4444"/>
+    <circle cx="41" cy="22" r="1.5" fill="#10b981"/>
+
+    <!-- Terminal keyboard -->
+    <rect x="5" y="22" width="25" height="6" fill="#374151" stroke="#1f2937" stroke-width="1"/>
+    <rect x="6" y="23" width="3" height="3" fill="#64748b"/>
+    <rect x="10" y="23" width="3" height="3" fill="#64748b"/>
+    <rect x="14" y="23" width="3" height="3" fill="#64748b"/>
+    <rect x="18" y="23" width="3" height="3" fill="#64748b"/>
+  </g>
+</svg>

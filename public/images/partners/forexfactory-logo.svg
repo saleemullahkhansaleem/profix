@@ -1,0 +1,23 @@
+<svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="60" rx="8" fill="#1e293b"/>
+  <!-- ForexFactory Logo Design -->
+  <g transform="translate(10, 15)">
+    <!-- Factory building icon -->
+    <rect x="5" y="20" width="30" height="10" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+    <rect x="8" y="15" width="24" height="5" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+    <rect x="12" y="10" width="16" height="5" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+    <rect x="16" y="5" width="8" height="5" fill="#ef4444" stroke="#dc2626" stroke-width="1"/>
+
+    <!-- Smoke stacks -->
+    <rect x="10" y="0" width="2" height="5" fill="#64748b"/>
+    <rect x="22" y="-2" width="2" height="7" fill="#64748b"/>
+
+    <!-- Currency symbols -->
+    <text x="40" y="10" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">$</text>
+    <text x="48" y="10" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">€</text>
+    <text x="56" y="10" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef4444">£</text>
+
+    <!-- ForexFactory text -->
+    <text x="40" y="25" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#94a3b8">ForexFactory</text>
+  </g>
+</svg>

@@ -21,16 +21,24 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-4">
             <p className="text text-muted-foreground leading-relaxed">
-              At PROFIX, we specialize in navigating the dynamic world of
-              financial markets, with a focus on trading stocks, commodities,
-              forex and cryptocurrencies. With over 7 years of hands-on
-              experience, we have built a reputation for integrity, precision
-              and consistent results.
+              At PROFIX, we specialize in navigating the fast-paced and
+              ever-evolving world of financial markets, with a sharp focus on
+              stocks, commodities, forex, and cryptocurrencies. Backed by over 7
+              years of hands-on experience, our team is driven by a commitment
+              to integrity, precision, and consistent performance.
             </p>
             <p className="text text-muted-foreground leading-relaxed">
-              Profix Marketing is not your average marketing agency. Providing
-              local expertise in navigating the UAE's CFD landscape, partnering
-              with trusted platforms like ADSS & EQUITI.
+              What sets Profix Marketing apart is our dual edge: we're not just
+              another marketing firm — we are financial market specialists with
+              deep, local expertise in the UAE's CFD trading landscape. As an
+              introducing broker for top-tier platforms like ADSS and EQUITI, we
+              bridge the gap between investors and reliable, regulated trading
+              environments.
+            </p>
+            <p className="text text-muted-foreground leading-relaxed">
+              Whether you're a seasoned trader or just stepping into the
+              markets, PROFIX is your trusted partner in achieving risk-managed,
+              stable returns through cutting-edge strategies and market insight.
             </p>
             <div className="grid sm:grid-cols-2 gap-y-4 gap-x-10 max-w-max mx-auto pt-6">
               {features.map((feature, index) => (

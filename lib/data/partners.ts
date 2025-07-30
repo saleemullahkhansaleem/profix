@@ -8,11 +8,11 @@ export interface Partner {
 
 export const partners: Partner[] = [
   {
-    id: "metatrader",
-    name: "MetaTrader",
-    logo: "/images/partners/metatrader-logo.svg",
-    alt: "MetaTrader Logo",
-    href: "https://www.metatrader4.com",
+    id: "investing",
+    name: "Investing.com",
+    logo: "/images/partners/investing-logo.svg",
+    alt: "Investing.com Logo",
+    href: "https://www.investing.com",
   },
   {
     id: "ctrader",
@@ -29,11 +29,11 @@ export const partners: Partner[] = [
     href: "https://www.tradingview.com",
   },
   {
-    id: "fxcm",
-    name: "FXCM",
-    logo: "/images/partners/fxcm-logo.svg",
-    alt: "FXCM Logo",
-    href: "https://www.fxcm.com",
+    id: "forexfactory",
+    name: "ForexFactory",
+    logo: "/images/partners/forexfactory-logo.svg",
+    alt: "ForexFactory Logo",
+    href: "https://www.forexfactory.com",
   },
   {
     id: "oanda",
@@ -43,10 +43,10 @@ export const partners: Partner[] = [
     href: "https://www.oanda.com",
   },
   {
-    id: "ig",
-    name: "IG",
-    logo: "/images/partners/ig-logo.svg",
-    alt: "IG Logo",
-    href: "https://www.ig.com",
+    id: "bloomberg",
+    name: "Bloomberg",
+    logo: "/images/partners/bloomberg-logo.svg",
+    alt: "Bloomberg Logo",
+    href: "https://www.bloomberg.com",
   },
 ];
