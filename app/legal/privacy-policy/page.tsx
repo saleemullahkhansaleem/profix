@@ -1,8 +1,9 @@
 "use client";
 
-import { Lock } from "lucide-react";
+import { Lock, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import { useLegalHero } from "../layout";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function PrivacyPolicyContent() {
   const { setHero } = useLegalHero();
@@ -48,10 +49,26 @@ export default function PrivacyPolicyContent() {
         <p className="mb-2 text-muted-foreground">
           For privacy-related questions, contact us at{" "}
           <a
-            href="mailto:privacy@yourcompany.com"
+            href="mailto:info@profixmarketing.com"
             className="text-teal-600 underline"
           >
-            privacy@yourcompany.com
+            info@profixmarketing.com
+          </a>{" "}
+          or{" "}
+          <a
+            href={generateWhatsAppLink({
+              service: "Legal Support",
+              page: "Privacy Policy",
+              button: "Contact Information",
+              customMessage:
+                "I have questions about the privacy policy and would like clarification.",
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-600 underline flex items-center gap-1 inline-flex"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp
           </a>
           .
         </p>

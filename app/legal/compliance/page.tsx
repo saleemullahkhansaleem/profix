@@ -1,8 +1,9 @@
 "use client";
 
-import { ShieldCheck } from "lucide-react";
+import { ShieldCheck, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import { useLegalHero } from "../layout";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function ComplianceContent() {
   const { setHero } = useLegalHero();
@@ -45,10 +46,26 @@ export default function ComplianceContent() {
           For any compliance-related inquiries or to report a concern, please
           contact our compliance team at{" "}
           <a
-            href="mailto:compliance@yourcompany.com"
+            href="mailto:info@profixmarketing.com"
             className="text-teal-600 underline"
           >
-            compliance@yourcompany.com
+            info@profixmarketing.com
+          </a>{" "}
+          or{" "}
+          <a
+            href={generateWhatsAppLink({
+              service: "Legal Support",
+              page: "Compliance",
+              button: "Contact Information",
+              customMessage:
+                "I have compliance-related inquiries or concerns that I would like to discuss.",
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-600 underline flex items-center gap-1 inline-flex"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp
           </a>
           .
         </p>

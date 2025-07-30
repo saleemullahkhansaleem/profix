@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function MarketInsightsPage() {
   return (
@@ -295,8 +296,15 @@ export default function MarketInsightsPage() {
               size="lg"
               variant="outline"
               className="border-white/20 text-white hover:bg-white/10 bg-transparent"
+              asChild
             >
-              <MessageCircle /> Contact Our Team
+              <Link
+                href={generateWhatsAppLink(whatsappMessages.marketInsights)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle /> Contact Our Team
+              </Link>
             </Button>
           </div>
         </div>

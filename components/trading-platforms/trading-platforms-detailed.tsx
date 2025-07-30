@@ -9,7 +9,15 @@ import {
 import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/utils/icons";
 import { tradingPlatformsData } from "@/lib/data/trading-platforms";
-import { Sparkles, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
+import {
+  Sparkles,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  MessageCircle,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function TradingPlatformsDetailed() {
   return (
@@ -141,7 +149,7 @@ export default function TradingPlatformsDetailed() {
         </div>
 
         {/* Bottom CTA */}
-        {/* <div className="mt-16 text-center">
+        <div className="mt-16 text-center">
           <div className="inline-flex flex-col items-center space-y-6 p-8 bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20 rounded-2xl max-w-2xl">
             <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl flex items-center justify-center">
               <Sparkles className="w-8 h-8 text-white" />
@@ -159,15 +167,34 @@ export default function TradingPlatformsDetailed() {
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-medium px-8"
+                asChild
               >
-                Get Started Today
+                <Link
+                  href="https://sey.portal.equiticlients.com/sc/register/?accountType=Standard&clickid=1125427&affid=C02194992"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Started Today
+                </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 px-8">
-                Contact Support
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 px-8"
+                asChild
+              >
+                <Link
+                  href={generateWhatsAppLink(whatsappMessages.tradingPlatforms)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Contact Support
+                </Link>
               </Button>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );

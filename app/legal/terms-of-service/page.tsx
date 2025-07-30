@@ -1,8 +1,9 @@
 "use client";
 
-import { FileText } from "lucide-react";
+import { FileText, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import { useLegalHero } from "../layout";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function TermsOfServiceContent() {
   const { setHero } = useLegalHero();
@@ -46,10 +47,26 @@ export default function TermsOfServiceContent() {
         <p className="mb-2 text-muted-foreground">
           For questions about these terms, contact us at{" "}
           <a
-            href="mailto:support@yourcompany.com"
+            href="mailto:info@profixmarketing.com"
             className="text-teal-600 underline"
           >
-            support@yourcompany.com
+            info@profixmarketing.com
+          </a>{" "}
+          or{" "}
+          <a
+            href={generateWhatsAppLink({
+              service: "Legal Support",
+              page: "Terms of Service",
+              button: "Contact Information",
+              customMessage:
+                "I have questions about the terms of service and would like clarification.",
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-600 underline flex items-center gap-1 inline-flex"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp
           </a>
           .
         </p>

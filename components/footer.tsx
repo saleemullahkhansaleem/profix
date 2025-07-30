@@ -1,7 +1,8 @@
-import { ArrowRight, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Mail, MapPin, MessageCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { partners } from "@/lib/data/partners";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function Footer() {
   return (
@@ -29,6 +30,11 @@ export default function Footer() {
                 {
                   label: "info@profixmarketing.com",
                   href: "mailto:info@profixmarketing.com",
+                },
+                {
+                  label: "+971 54 582 7355",
+                  href: generateWhatsAppLink(whatsappMessages.footer),
+                  isWhatsApp: true,
                 },
                 { label: "Dubai, UAE" },
                 { label: "Abu Dhabi, UAE" },
@@ -84,6 +90,8 @@ export default function Footer() {
                     {section.heading === "Contact" ? (
                       link.label.includes("@") ? (
                         <Mail size={16} />
+                      ) : "isWhatsApp" in link && link.isWhatsApp ? (
+                        <MessageCircle size={16} />
                       ) : (
                         <MapPin size={16} />
                       )
@@ -91,7 +99,15 @@ export default function Footer() {
                       <ArrowRight size={16} />
                     )}
                     {"href" in link && link.href ? (
-                      <Link href={link.href}>{link.label}</Link>
+                      <Link
+                        href={link.href}
+                        target={link.isWhatsApp ? "_blank" : undefined}
+                        rel={
+                          link.isWhatsApp ? "noopener noreferrer" : undefined
+                        }
+                      >
+                        {link.label}
+                      </Link>
                     ) : (
                       link.label
                     )}

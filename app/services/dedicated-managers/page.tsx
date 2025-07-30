@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function DedicatedManagersPage() {
   return (
@@ -51,8 +52,16 @@ export default function DedicatedManagersPage() {
                 understands your goals and trading preferences.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="default">
-                  <MessageCircle /> Get Your Manager
+                <Button size="default" asChild>
+                  <Link
+                    href={generateWhatsAppLink(
+                      whatsappMessages.dedicatedManagers
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle /> Get Your Manager
+                  </Link>
                 </Button>
                 {/* <Button size="default" variant="outline">
                   Learn More
@@ -262,8 +271,14 @@ export default function DedicatedManagersPage() {
             Experience the difference of having a dedicated trading partner by
             your side
           </p>
-          <Button size="lg" variant="secondary">
-            <MessageCircle /> Get Your Dedicated Manager Today
+          <Button size="lg" variant="secondary" asChild>
+            <Link
+              href={generateWhatsAppLink(whatsappMessages.dedicatedManagers)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle /> Get Your Dedicated Manager Today
+            </Link>
           </Button>
         </div>
       </section>

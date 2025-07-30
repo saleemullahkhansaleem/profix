@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function CustomerCentricPage() {
   return (
@@ -54,8 +55,16 @@ export default function CustomerCentricPage() {
                     Get Start Today
                   </Link>
                 </Button>
-                <Button size="default" variant="outline">
-                  <MessageCircle /> Talk to Us
+                <Button size="default" variant="outline" asChild>
+                  <Link
+                    href={generateWhatsAppLink(
+                      whatsappMessages.customerCentric
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle /> Talk to Us
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -239,9 +248,17 @@ export default function CustomerCentricPage() {
                     Get Started Today
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Talk to Us
+                <Button size="lg" variant="outline" asChild>
+                  <Link
+                    href={generateWhatsAppLink(
+                      whatsappMessages.customerCentric
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    Talk to Us
+                  </Link>
                 </Button>
               </div>
             </div>

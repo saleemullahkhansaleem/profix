@@ -1,8 +1,9 @@
 "use client";
 
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
 import { useLegalHero } from "../layout";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function RiskDisclosureContent() {
   const { setHero } = useLegalHero();
@@ -46,10 +47,26 @@ export default function RiskDisclosureContent() {
         <p className="mb-2 text-muted-foreground">
           For questions about risk, contact us at{" "}
           <a
-            href="mailto:support@yourcompany.com"
+            href="mailto:info@profixmarketing.com"
             className="text-teal-600 underline"
           >
-            support@yourcompany.com
+            info@profixmarketing.com
+          </a>{" "}
+          or{" "}
+          <a
+            href={generateWhatsAppLink({
+              service: "Legal Support",
+              page: "Risk Disclosure",
+              button: "Contact Information",
+              customMessage:
+                "I have questions about risk disclosure and would like clarification.",
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-teal-600 underline flex items-center gap-1 inline-flex"
+          >
+            <MessageCircle className="w-4 h-4" />
+            WhatsApp
           </a>
           .
         </p>

@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Phone, Mail, MapPin } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Phone,
+  Mail,
+  MapPin,
+  MessageCircle,
+} from "lucide-react";
+import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function ContactSection() {
   return (
@@ -40,9 +48,16 @@ export default function ContactSection() {
               size="lg"
               variant="outline"
               className="border-2 border-slate-400 text-slate-300 hover:bg-slate-800 hover:text-white hover:border-slate-300 transition-all duration-300 px-10 py-4 bg-transparent"
+              asChild
             >
-              <Phone className="mr-2 w-4 h-4" />
-              Schedule Consultation
+              <Link
+                href={generateWhatsAppLink(whatsappMessages.contact)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="mr-2 w-4 h-4" />
+                Chat on WhatsApp
+              </Link>
             </Button>
           </div>
         </div>
