@@ -10,153 +10,14 @@ import {
   Calendar,
   Globe,
   Activity,
-  TrendingUp,
-  TrendingDown,
 } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 import { TradingViewWidget } from "@/components/ui/tradingview-widget";
-import { useEffect, useState } from "react";
-
-interface MarketData {
-  symbol: string;
-  price: string;
-  change: string;
-  changePercent: string;
-  trend: "up" | "down";
-}
 
 export default function MarketInsightsWrapper() {
-  const [marketData, setMarketData] = useState<MarketData[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  // Fetch live market data
-  const fetchMarketData = async () => {
-    try {
-      // Using Alpha Vantage API for real-time forex data
-      const symbols = ["EURUSD", "GBPUSD", "USDJPY", "XAUUSD", "BTCUSD"];
-      const apiKey = "demo"; // Replace with your Alpha Vantage API key
-
-      const dataPromises = symbols.map(async (symbol) => {
-        try {
-          const response = await fetch(
-            `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${symbol.slice(
-              0,
-              3
-            )}&to_currency=${symbol.slice(3)}&apikey=${apiKey}`
-          );
-          const data = await response.json();
-
-          if (data["Realtime Currency Exchange Rate"]) {
-            const rate = data["Realtime Currency Exchange Rate"];
-            const price = parseFloat(rate["5. Exchange Rate"]);
-            const change = (Math.random() - 0.5) * 0.02; // Simulated change for demo
-            const changePercent = (change * 100).toFixed(2);
-
-            return {
-              symbol:
-                symbol === "XAUUSD"
-                  ? "Gold"
-                  : symbol === "BTCUSD"
-                  ? "Bitcoin"
-                  : symbol,
-              price: price.toFixed(4),
-              change: `${change > 0 ? "+" : ""}${change.toFixed(4)}`,
-              changePercent: `${change > 0 ? "+" : ""}${changePercent}%`,
-              trend: change > 0 ? "up" : "down",
-            };
-          }
-        } catch (error) {
-          console.error(`Error fetching ${symbol}:`, error);
-        }
-
-        // Fallback data if API fails
-        return getFallbackData(symbol);
-      });
-
-      const results = await Promise.all(dataPromises);
-      const validResults = results.filter(Boolean) as MarketData[];
-
-      setMarketData(validResults);
-    } catch (error) {
-      console.error("Error fetching market data:", error);
-      // Use fallback data if API fails
-      setMarketData(getFallbackMarketData());
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const getFallbackData = (symbol: string): MarketData => {
-    const fallbackData = {
-      EURUSD: { price: "1.0845", change: "+0.0012", changePercent: "+0.12%" },
-      GBPUSD: { price: "1.2634", change: "-0.0010", changePercent: "-0.08%" },
-      USDJPY: { price: "149.82", change: "+0.37", changePercent: "+0.25%" },
-      XAUUSD: { price: "2018.45", change: "+9.10", changePercent: "+0.45%" },
-      BTCUSD: { price: "43250", change: "+910", changePercent: "+2.15%" },
-    };
-
-    const data =
-      fallbackData[symbol as keyof typeof fallbackData] || fallbackData.EURUSD;
-    return {
-      symbol:
-        symbol === "XAUUSD" ? "Gold" : symbol === "BTCUSD" ? "Bitcoin" : symbol,
-      price: data.price,
-      change: data.change,
-      changePercent: data.changePercent,
-      trend: data.change.startsWith("+") ? "up" : "down",
-    };
-  };
-
-  const getFallbackMarketData = (): MarketData[] => [
-    {
-      symbol: "EUR/USD",
-      price: "1.0845",
-      change: "+0.0012",
-      changePercent: "+0.12%",
-      trend: "up",
-    },
-    {
-      symbol: "GBP/USD",
-      price: "1.2634",
-      change: "-0.0010",
-      changePercent: "-0.08%",
-      trend: "down",
-    },
-    {
-      symbol: "USD/JPY",
-      price: "149.82",
-      change: "+0.37",
-      changePercent: "+0.25%",
-      trend: "up",
-    },
-    {
-      symbol: "Gold",
-      price: "2,018.45",
-      change: "+9.10",
-      changePercent: "+0.45%",
-      trend: "up",
-    },
-    {
-      symbol: "Bitcoin",
-      price: "43,250",
-      change: "+910",
-      changePercent: "+2.15%",
-      trend: "up",
-    },
-  ];
-
-  useEffect(() => {
-    fetchMarketData();
-
-    // Update data every 30 seconds
-    const interval = setInterval(fetchMarketData, 30000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -284,53 +145,6 @@ export default function MarketInsightsWrapper() {
                     showSymbolSelector={true}
                   />
                 </div>
-              </div>
-            </div>
-
-            {/* Live Market Overview */}
-            <div className="mt-8">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">Live Market Overview</h3>
-                <div className="flex items-center gap-2">
-                  {loading && (
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      Updating...
-                    </div>
-                  )}
-                  <div className="text-xs text-muted-foreground">
-                    Updates every 30s
-                  </div>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-3">
-                {marketData.map((item, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between p-3 bg-muted/50 rounded-lg hover:bg-muted/70 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-sm">{item.symbol}</span>
-                      {item.trend === "up" ? (
-                        <TrendingUp className="w-3 h-3 text-green-600" />
-                      ) : (
-                        <TrendingDown className="w-3 h-3 text-red-600" />
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className="font-semibold text-sm">{item.price}</div>
-                      <div
-                        className={`text-xs ${
-                          item.trend === "up"
-                            ? "text-green-600"
-                            : "text-red-600"
-                        }`}
-                      >
-                        {item.changePercent}
-                      </div>
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
