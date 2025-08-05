@@ -36,7 +36,7 @@ export function SEOHead({
   canonical,
   structuredData,
 }: SEOHeadProps) {
-  const baseUrl = "https://profixmarketing.vercel.app";
+  const baseUrl = "https://profixmarketing.com";
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
   const imageUrl = `${baseUrl}${image}`;
   const canonicalUrl = canonical || fullUrl;

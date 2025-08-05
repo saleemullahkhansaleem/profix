@@ -173,8 +173,8 @@ export function ProfixOrganizationSchema() {
     <OrganizationStructuredData
       data={{
         name: "PROFIX MARKETING",
-        url: "https://profixmarketing.vercel.app",
-        logo: "https://profixmarketing.vercel.app/profix-logo.png",
+        url: "https://profixmarketing.com",
+        logo: "https://profixmarketing.com/profix-logo.png",
         description:
           "Expert financial trading services with 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
         address: {
@@ -203,11 +203,10 @@ export function ProfixWebSiteSchema() {
     <WebSiteStructuredData
       data={{
         name: "PROFIX MARKETING",
-        url: "https://profixmarketing.vercel.app",
+        url: "https://profixmarketing.com",
         description: "Expert financial trading services and education",
         potentialAction: {
-          target:
-            "https://profixmarketing.vercel.app/search?q={search_term_string}",
+          target: "https://profixmarketing.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       }}

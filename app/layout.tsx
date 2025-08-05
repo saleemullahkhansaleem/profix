@@ -17,9 +17,7 @@ export const metadata: Metadata = {
   generator: "Next.js",
   applicationName: "PROFIX MARKETING",
   referrer: "origin-when-cross-origin",
-  authors: [
-    { name: "PROFIX MARKETING", url: "https://profixmarketing.vercel.app" },
-  ],
+  authors: [{ name: "PROFIX MARKETING", url: "https://profixmarketing.com" }],
   creator: "PROFIX MARKETING",
   publisher: "PROFIX MARKETING",
   icons: {

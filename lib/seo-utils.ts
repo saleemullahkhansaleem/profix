@@ -11,7 +11,7 @@ export function generateBreadcrumbSchema(
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://profixmarketing.vercel.app${item.url}`,
+      item: `https://profixmarketing.com${item.url}`,
     })),
   };
 }
@@ -42,7 +42,7 @@ export function generateLocalBusinessSchema() {
     name: "PROFIX MARKETING",
     description:
       "Expert financial trading services with 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
-    url: "https://profixmarketing.vercel.app",
+    url: "https://profixmarketing.com",
     telephone: "+971-XX-XXX-XXXX",
     email: "info@profixmarketing.com",
     address: {
@@ -250,7 +250,7 @@ export function generateSocialMetadata(
   image: string = "/og-image.png",
   url?: string
 ) {
-  const baseUrl = "https://profixmarketing.vercel.app";
+  const baseUrl = "https://profixmarketing.com";
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl;
   const imageUrl = `${baseUrl}${image}`;
 

@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 export const revalidate = false;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://profixmarketing.vercel.app";
+  const baseUrl = "https://profixmarketing.com";
 
   // Main pages
   const mainPages = [

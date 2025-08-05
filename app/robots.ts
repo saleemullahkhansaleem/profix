@@ -10,7 +10,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/", "/_next/", "/private/"],
     },
-    sitemap: "https://profixmarketing.vercel.app/sitemap.xml",
-    host: "https://profixmarketing.vercel.app",
+    sitemap: "https://profixmarketing.com/sitemap.xml",
+    host: "https://profixmarketing.com",
   };
 }

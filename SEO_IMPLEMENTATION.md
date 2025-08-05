@@ -162,8 +162,8 @@ export const metadata: Metadata = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "PROFIX MARKETING",
-  "url": "https://profixmarketing.vercel.app",
-  "logo": "https://profixmarketing.vercel.app/profix-logo.png",
+  "url": "https://profixmarketing.com",
+  "logo": "https://profixmarketing.com/profix-logo.png",
   "description": "Expert financial trading services...",
   "address": {
     "@type": "PostalAddress",

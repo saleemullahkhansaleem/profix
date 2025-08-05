@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-const baseUrl = "https://profixmarketing.vercel.app";
+const baseUrl = "https://profixmarketing.com";
 const siteName = "PROFIX MARKETING";
 
 export interface SEOConfig {
