@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import TradingPlatformsDetailed from "@/components/trading-platforms/trading-platforms-detailed";
@@ -17,6 +18,9 @@ import {
 } from "@/lib/data/trading-platforms";
 import { Sparkles, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { tradingPlatformsSEO } from "@/lib/seo";
+
+export const metadata: Metadata = tradingPlatformsSEO;
 
 export default function TradingPlatformsPage() {
   return (

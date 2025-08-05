@@ -1,4 +1,4 @@
-"use client";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +20,9 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
+import { dedicatedManagersSEO } from "@/lib/seo";
+
+export const metadata: Metadata = dedicatedManagersSEO;
 
 export default function DedicatedManagersPage() {
   return (

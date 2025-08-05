@@ -3,28 +3,20 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { homePageSEO } from "@/lib/seo";
+import {
+  ProfixOrganizationSchema,
+  ProfixWebSiteSchema,
+} from "@/components/seo/structured-data";
+import { ClientCoreWebVitalsMonitor } from "@/components/seo/client-monitor";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PROFIX MARKETING - Expert Financial Trading",
-  description:
-    "Navigate financial markets with expert precision. 7+ years of experience in stocks, forex, commodities, and cryptocurrencies.",
-  metadataBase: new URL("https://profixmarketing.vercel.app"),
+  ...homePageSEO,
   generator: "Next.js",
   applicationName: "PROFIX MARKETING",
   referrer: "origin-when-cross-origin",
-  keywords: [
-    "Profix Marketing",
-    "Financial Trading",
-    "Forex",
-    "Stocks",
-    "Cryptocurrencies",
-    "CFD Trading",
-    "Commodities",
-    "Investment",
-    "Trading UAE",
-  ],
   authors: [
     { name: "PROFIX MARKETING", url: "https://profixmarketing.vercel.app" },
   ],
@@ -39,41 +31,12 @@ export const metadata: Metadata = {
       url: "/android-chrome-192x192.png",
     },
   },
-  openGraph: {
-    title: "PROFIX MARKETING - Expert Financial Trading",
-    description:
-      "Explore expert trading strategies in Forex, Stocks, Commodities, and Crypto with Profix Marketing. Trusted by clients in UAE and beyond.",
-    url: "https://profixmarketing.vercel.app",
-    siteName: "PROFIX MARKETING",
-    images: [
-      {
-        url: "https://profixmarketing.vercel.app/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "PROFIX MARKETING - Expert Financial Trading",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PROFIX MARKETING - Expert Financial Trading",
-    description:
-      "7+ years of expertise in Forex, Stocks, Crypto & CFD trading. Navigate financial markets with confidence.",
-    creator: "https://mrsaleem.vercel.app/",
-    images: ["https://profixmarketing.vercel.app/og-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
+  manifest: "/site.webmanifest",
+  category: "Finance",
+  classification: "Business",
+  other: {
+    "msapplication-TileColor": "#00cc88",
+    "theme-color": "#00cc88",
   },
 };
 
@@ -93,6 +56,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <ProfixOrganizationSchema />
+        <ProfixWebSiteSchema />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -100,6 +67,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ClientCoreWebVitalsMonitor />
           {children}
         </ThemeProvider>
       </body>

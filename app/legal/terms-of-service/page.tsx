@@ -2,7 +2,7 @@
 
 import { FileText, MessageCircle } from "lucide-react";
 import { useEffect } from "react";
-import { useLegalHero } from "../layout";
+import { useLegalHero } from "@/components/legal/client-legal-hero";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function TermsOfServiceContent() {
