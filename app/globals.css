@@ -12,6 +12,40 @@ body {
   }
 }
 
+/* TradingView Widget Styles */
+.tradingview-widget-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.tradingview-widget-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  border: none !important;
+  border-radius: 8px !important;
+  flex: 1 !important;
+}
+
+/* Ensure TradingView widget fills its container */
+#detailed_chart {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  flex: 1 !important;
+}
+
+#stock_chart,
+#forex_chart,
+#crypto_chart {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px !important;
+}
+
 /* @layer base {
   :root {
     --background: 0 0% 100%;
