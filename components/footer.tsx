@@ -156,9 +156,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-6 pt-4 text-center text-sm text-slate-400 flex items-center justify-between gap-2">
-          <p>&copy; 2024 PROFIX MARKETING. All rights reserved.</p>
-          <MrCard />
+        <div className="border-t border-slate-800 mt-6 pt-4 text-center text-sm text-slate-400">
+          <p>&copy; 2025 PROFIX MARKETING. All rights reserved.</p>
+          {/* <MrCard /> */}
         </div>
       </div>
     </footer>
