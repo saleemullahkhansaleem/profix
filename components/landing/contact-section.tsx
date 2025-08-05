@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowRight, Sparkles, Phone, Mail, MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function ContactSection() {
@@ -55,7 +49,7 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="mr-2 w-4 h-4" />
+                <WhatsAppIcon className="mr-2 w-4 h-4" />
                 Chat on WhatsApp
               </Link>
             </Button>

@@ -1,6 +1,7 @@
 "use client";
 
-import { AlertTriangle, MessageCircle } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { useEffect } from "react";
 import { useLegalHero } from "@/components/legal/client-legal-hero";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
@@ -65,7 +66,7 @@ export default function RiskDisclosureContent() {
             rel="noopener noreferrer"
             className="text-teal-600 underline flex items-center gap-1 inline-flex"
           >
-            <MessageCircle className="w-4 h-4" />
+            <WhatsAppIcon className="w-4 h-4" />
             WhatsApp
           </a>
           .

@@ -10,13 +10,8 @@ import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/utils/icons";
 import { tradingPlatformsData } from "@/lib/data/trading-platforms";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
-import {
-  Sparkles,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  MessageCircle,
-} from "lucide-react";
+import { Sparkles, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Link from "next/link";
 
 export default function TradingPlatformsDetailed() {
@@ -188,7 +183,7 @@ export default function TradingPlatformsDetailed() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
+                  <WhatsAppIcon className="w-4 h-4 mr-2" />
                   Contact Support
                 </Link>
               </Button>

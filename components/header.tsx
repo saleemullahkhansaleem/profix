@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./theme-toggle";
-import { Sparkles, MessageCircle } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
 
 export default function Header({ nav = false }: { nav?: Boolean }) {
@@ -72,7 +73,7 @@ export default function Header({ nav = false }: { nav?: Boolean }) {
                 rel="noopener noreferrer"
                 className="text-sm hover:text-teal-600 transition-all duration-300 font-medium bg-transparent border-none cursor-pointer flex items-center gap-1"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 Contact
               </Link>
             </nav>

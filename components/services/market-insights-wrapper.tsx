@@ -10,10 +10,10 @@ import {
   Calendar,
   Globe,
   Activity,
-  MessageCircle,
   TrendingUp,
   TrendingDown,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
@@ -364,7 +364,7 @@ export default function MarketInsightsWrapper() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle /> Contact Our Team
+                <WhatsAppIcon className="w-4 h-4 mr-2" /> Contact Our Team
               </Link>
             </Button>
           </div>

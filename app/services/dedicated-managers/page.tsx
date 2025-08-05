@@ -7,7 +7,6 @@ import {
   Briefcase,
   ArrowLeft,
   User,
-  MessageCircle,
   TrendingUp,
   Shield,
   Clock,
@@ -16,7 +15,9 @@ import {
   Phone,
   Mail,
   MessageSquare,
+  MessageCircle,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
@@ -63,7 +64,7 @@ export default function DedicatedManagersPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle /> Get Your Manager
+                    <WhatsAppIcon className="w-4 h-4 mr-1" /> Get Your Manager
                   </Link>
                 </Button>
                 {/* <Button size="default" variant="outline">
@@ -280,7 +281,8 @@ export default function DedicatedManagersPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle /> Get Your Dedicated Manager Today
+              <WhatsAppIcon className="w-4 h-4 mr-2" /> Get Your Dedicated
+              Manager Today
             </Link>
           </Button>
         </div>

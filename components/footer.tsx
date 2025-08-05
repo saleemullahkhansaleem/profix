@@ -1,4 +1,5 @@
-import { ArrowRight, Mail, MapPin, MessageCircle } from "lucide-react";
+import { ArrowRight, Mail, MapPin } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { partners } from "@/lib/data/partners";
@@ -92,7 +93,7 @@ export default function Footer() {
                       link.label.includes("@") ? (
                         <Mail size={16} />
                       ) : "isWhatsApp" in link && link.isWhatsApp ? (
-                        <MessageCircle size={16} />
+                        <WhatsAppIcon className="w-4 h-4" />
                       ) : (
                         <MapPin size={16} />
                       )

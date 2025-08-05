@@ -8,13 +8,14 @@ import {
   ArrowLeft,
   Heart,
   Users,
-  MessageCircle,
   Shield,
   CheckCircle,
   Phone,
   Mail,
   Zap,
+  MessageCircle,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Image from "next/image";
 import Link from "next/link";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
@@ -66,7 +67,7 @@ export default function CustomerCentricPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle /> Talk to Us
+                    <WhatsAppIcon className="w-4 h-4 mr-1" /> Talk to Us
                   </Link>
                 </Button>
               </div>
@@ -259,7 +260,7 @@ export default function CustomerCentricPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <WhatsAppIcon className="w-4 h-4 mr-2" />
                     Talk to Us
                   </Link>
                 </Button>
