@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/header";
 import { ReactNode } from "react";
 import ClientLegalLayout from "@/components/legal/client-legal-hero";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Legal Information | PROFIX MARKETING",
@@ -19,6 +20,7 @@ export default function LegalLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <ClientLegalLayout>{children}</ClientLegalLayout>
+      <Footer />
     </div>
   );
 }
