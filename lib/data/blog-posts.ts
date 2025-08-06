@@ -105,6 +105,265 @@ export const blogPosts: BlogPost[] = [
     relatedPosts: ["trading-101-basics", "learn-online-trading"],
   },
   {
+    id: "trading-optimization-plugins",
+    title: "Optimise your trading: Plug-ins",
+    category: "Trading 101",
+    readTime: "6 min",
+    author: "PROFIX Team",
+    date: "2025-02-20",
+    description:
+      "Essential trading platform plugins to enhance your trading experience and performance",
+    keyTakeaways: [
+      "Trading plugins can automate repetitive tasks",
+      "Risk management plugins help protect your capital",
+      "Analysis plugins provide deeper market insights",
+      "Choose plugins that match your trading style",
+    ],
+    content: `
+      <h2>Trading Platform Plugins</h2>
+      <p>Trading plugins are software add-ons that enhance your trading platform's functionality and help you trade more efficiently.</p>
+
+      <h3>Essential Plugin Categories</h3>
+      <ul>
+        <li><strong>Risk Management Plugins:</strong> Automate stop losses and position sizing</li>
+        <li><strong>Analysis Plugins:</strong> Advanced charting and indicator tools</li>
+        <li><strong>Automation Plugins:</strong> Execute trades based on predefined conditions</li>
+        <li><strong>News Plugins:</strong> Real-time economic calendar and news feeds</li>
+      </ul>
+
+      <h3>Popular Trading Plugins</h3>
+      <p>Some of the most useful trading plugins include:</p>
+      <ul>
+        <li>Position size calculators</li>
+        <li>Risk-reward ratio analyzers</li>
+        <li>Multi-timeframe analysis tools</li>
+        <li>Trade journal and performance trackers</li>
+        <li>Market correlation matrices</li>
+      </ul>
+
+      <h3>Choosing the Right Plugins</h3>
+      <p>When selecting plugins, consider:</p>
+      <ul>
+        <li>Compatibility with your trading platform</li>
+        <li>Your trading style and needs</li>
+        <li>Plugin reviews and community feedback</li>
+        <li>Cost versus benefits</li>
+      </ul>
+    `,
+    relatedPosts: ["trading-101-basics", "order-flow-tools"],
+  },
+  {
+    id: "order-flow-tools",
+    title: "Optimise your trading: Order flow tools",
+    category: "Trading 101",
+    readTime: "10 min",
+    author: "PROFIX Team",
+    date: "2025-02-19",
+    description:
+      "Master order flow analysis to understand market dynamics and improve trading decisions",
+    keyTakeaways: [
+      "Order flow shows real-time buying and selling pressure",
+      "Volume profile reveals key support and resistance levels",
+      "Time and sales data provides market microstructure insights",
+      "Order flow tools help identify institutional activity",
+    ],
+    content: `
+      <h2>Order Flow Analysis Tools</h2>
+      <p>Order flow analysis examines the real-time buying and selling activity in the market to understand price movements and predict future direction.</p>
+
+      <h3>Key Order Flow Tools</h3>
+      <ul>
+        <li><strong>Volume Profile:</strong> Shows trading activity at different price levels</li>
+        <li><strong>Time and Sales:</strong> Real-time transaction data</li>
+        <li><strong>Level 2 Data:</strong> Market depth and order book information</li>
+        <li><strong>Footprint Charts:</strong> Visual representation of order flow</li>
+        <li><strong>Delta Analysis:</strong> Net buying vs selling pressure</li>
+      </ul>
+
+      <h3>Understanding Order Flow</h3>
+      <p>Order flow analysis helps you:</p>
+      <ul>
+        <li>Identify institutional buying and selling</li>
+        <li>Spot potential reversal points</li>
+        <li>Understand market sentiment</li>
+        <li>Improve entry and exit timing</li>
+        <li>Confirm technical analysis signals</li>
+      </ul>
+
+      <h3>Practical Applications</h3>
+      <p>Use order flow tools to:</p>
+      <ul>
+        <li>Find high-probability entry points</li>
+        <li>Identify stop loss levels</li>
+        <li>Gauge market strength</li>
+        <li>Time your exits more effectively</li>
+      </ul>
+    `,
+    relatedPosts: ["trading-optimization-plugins", "market-psychology"],
+  },
+  {
+    id: "market-psychology",
+    title: "Understanding market and trader psychology",
+    category: "Trading 101",
+    readTime: "15 min",
+    author: "PROFIX Team",
+    date: "2025-02-18",
+    description:
+      "Master the psychological aspects of trading to improve decision-making and emotional control",
+    keyTakeaways: [
+      "Market psychology drives price movements",
+      "Emotional control is crucial for trading success",
+      "Understanding crowd behavior helps predict market moves",
+      "Fear and greed are the primary market emotions",
+    ],
+    content: `
+      <h2>Market and Trader Psychology</h2>
+      <p>Understanding market psychology is essential for successful trading. Markets are driven by human emotions, and recognizing these patterns can give you a significant edge.</p>
+
+      <h3>Key Market Emotions</h3>
+      <ul>
+        <li><strong>Fear:</strong> Causes selling pressure and market declines</li>
+        <li><strong>Greed:</strong> Drives buying frenzies and bubbles</li>
+        <li><strong>Hope:</strong> Keeps traders in losing positions</li>
+        <li><strong>Regret:</strong> Prevents taking necessary actions</li>
+      </ul>
+
+      <h3>Market Psychology Patterns</h3>
+      <p>Common psychological patterns in markets include:</p>
+      <ul>
+        <li><strong>Herd Mentality:</strong> Following the crowd</li>
+        <li><strong>Confirmation Bias:</strong> Seeking information that confirms beliefs</li>
+        <li><strong>Anchoring:</strong> Fixating on specific price levels</li>
+        <li><strong>Overconfidence:</strong> Believing you can't lose</li>
+      </ul>
+
+      <h3>Managing Your Psychology</h3>
+      <p>To improve your trading psychology:</p>
+      <ul>
+        <li>Develop a trading plan and stick to it</li>
+        <li>Use proper position sizing</li>
+        <li>Keep a trading journal</li>
+        <li>Practice meditation and stress management</li>
+        <li>Take regular breaks from trading</li>
+      </ul>
+
+      <h3>Reading Market Sentiment</h3>
+      <p>Indicators of market sentiment include:</p>
+      <ul>
+        <li>Fear and Greed Index</li>
+        <li>Put/Call ratios</li>
+        <li>Volatility indices</li>
+        <li>News sentiment analysis</li>
+        <li>Social media sentiment</li>
+      </ul>
+    `,
+    relatedPosts: ["order-flow-tools", "trading-calendars"],
+  },
+  {
+    id: "trading-calendars",
+    title: "Optimise your trading: Calendars",
+    category: "Trading 101",
+    readTime: "7 min",
+    author: "PROFIX Team",
+    date: "2025-02-17",
+    description:
+      "Use trading calendars to plan your trades around important market events and economic releases",
+    keyTakeaways: [
+      "Economic calendars help plan trades around news events",
+      "Earnings calendars are crucial for stock traders",
+      "Holiday calendars prevent trading during low-liquidity periods",
+      "Seasonal patterns can improve trading timing",
+    ],
+    content: `
+      <h2>Trading Calendars and Market Events</h2>
+      <p>Trading calendars help you stay organized and avoid trading during unfavorable market conditions or high-impact news events.</p>
+
+      <h3>Essential Trading Calendars</h3>
+      <ul>
+        <li><strong>Economic Calendar:</strong> Central bank meetings, GDP, employment data</li>
+        <li><strong>Earnings Calendar:</strong> Company earnings releases</li>
+        <li><strong>Holiday Calendar:</strong> Market closures and reduced liquidity</li>
+        <li><strong>Options Expiry Calendar:</strong> Monthly options expiration dates</li>
+        <li><strong>Seasonal Calendar:</strong> Historical seasonal patterns</li>
+      </ul>
+
+      <h3>High-Impact Economic Events</h3>
+      <p>Key events that significantly move markets:</p>
+      <ul>
+        <li>Federal Reserve interest rate decisions</li>
+        <li>Non-farm payroll reports</li>
+        <li>GDP growth announcements</li>
+        <li>Inflation data releases</li>
+        <li>Central bank press conferences</li>
+      </ul>
+
+      <h3>Using Calendars Effectively</h3>
+      <p>Best practices for calendar trading:</p>
+      <ul>
+        <li>Plan trades around major events</li>
+        <li>Avoid trading during high-impact news</li>
+        <li>Use calendar events for trade ideas</li>
+        <li>Adjust position sizes during volatile periods</li>
+        <li>Set alerts for important events</li>
+      </ul>
+    `,
+    relatedPosts: ["market-psychology", "market-sectors"],
+  },
+  {
+    id: "market-sectors",
+    title: "Market sectors",
+    category: "Trading 101",
+    readTime: "9 min",
+    author: "PROFIX Team",
+    date: "2025-02-16",
+    description:
+      "Understanding different market sectors and their unique characteristics for better trading decisions",
+    keyTakeaways: [
+      "Different sectors perform differently in various market conditions",
+      "Sector rotation strategies can improve returns",
+      "Understanding sector correlations helps with diversification",
+      "Economic cycles affect sector performance",
+    ],
+    content: `
+      <h2>Market Sectors and Sector Analysis</h2>
+      <p>Market sectors are groups of companies that operate in similar business areas. Understanding sector dynamics is crucial for stock traders and portfolio managers.</p>
+
+      <h3>Major Market Sectors</h3>
+      <ul>
+        <li><strong>Technology:</strong> Software, hardware, internet companies</li>
+        <li><strong>Healthcare:</strong> Pharmaceuticals, biotechnology, medical devices</li>
+        <li><strong>Financial:</strong> Banks, insurance, investment firms</li>
+        <li><strong>Consumer Discretionary:</strong> Retail, entertainment, travel</li>
+        <li><strong>Consumer Staples:</strong> Food, beverages, household products</li>
+        <li><strong>Energy:</strong> Oil, gas, renewable energy</li>
+        <li><strong>Industrial:</strong> Manufacturing, construction, transportation</li>
+        <li><strong>Materials:</strong> Mining, chemicals, construction materials</li>
+        <li><strong>Utilities:</strong> Electric, gas, water companies</li>
+        <li><strong>Real Estate:</strong> REITs, property development</li>
+      </ul>
+
+      <h3>Sector Rotation Strategies</h3>
+      <p>Sector rotation involves moving investments between sectors based on economic cycles:</p>
+      <ul>
+        <li><strong>Early Recovery:</strong> Financials, consumer discretionary</li>
+        <li><strong>Mid-Cycle:</strong> Technology, industrials</li>
+        <li><strong>Late Cycle:</strong> Energy, materials</li>
+        <li><strong>Recession:</strong> Consumer staples, utilities</li>
+      </ul>
+
+      <h3>Sector Analysis Tools</h3>
+      <p>Useful tools for sector analysis:</p>
+      <ul>
+        <li>Sector ETFs and indices</li>
+        <li>Relative strength analysis</li>
+        <li>Sector correlation matrices</li>
+        <li>Economic indicators by sector</li>
+        <li>Sector-specific news and events</li>
+      </ul>
+    `,
+    relatedPosts: ["trading-calendars", "trading-strategy-assets"],
+  },
+  {
     id: "risk-management-basics",
     title: "Risk Management",
     category: "Risk Management",
