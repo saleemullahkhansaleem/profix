@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/utils/icons";
 import { tradingPlatformsData } from "@/lib/data/trading-platforms";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 // Helper function to extract text color from gradient
@@ -45,135 +45,137 @@ export default function TradingPlatformsSection() {
           </p>
         </div>
 
-        {/* Platform Categories Overview */}
-        <div className="grid md:grid-cols-3 gap-6 mb-6">
-          {tradingPlatformsData.map((category, index) => (
-            <Card
-              key={category.id}
-              className={`group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br ${category.color.secondary} dark:${category.color.gradient} hover:scale-105 hover:-translate-y-2`}
-              style={{
-                animationDelay: `${index * 150}ms`,
-                boxShadow:
-                  "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-              }}
-            >
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-              {/* Decorative Elements */}
-              <div
-                className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${category.color.primary} opacity-10 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700`}
-              ></div>
-              <div
-                className={`absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr ${category.color.primary} opacity-5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700`}
-              ></div>
-
-              <CardContent className="text-center p-6 relative z-10">
-                {/* Icon Container */}
-                <div
-                  className={`w-16 h-16 bg-gradient-to-r ${category.color.primary} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-2xl`}
-                >
-                  <DynamicIcon
-                    name={category.icon}
-                    className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-
-                {/* Content */}
-                <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
-                  {category.name}
-                </CardTitle>
-                <CardDescription className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
-                  {category.description}
-                </CardDescription>
-                <div className="text-xs text-muted-foreground">
-                  {category.platforms.length} platform
-                  {category.platforms.length !== 1 ? "s" : ""} available
-                </div>
-              </CardContent>
-              {/* Bottom Border Animation */}
-              <div
-                className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${category.color.primary} group-hover:w-full transition-all duration-500 ease-out`}
-              ></div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Featured Platforms */}
-        <div className="grid lg:grid-cols-2 gap-6 mb-6">
-          {tradingPlatformsData.slice(0, 2).map((category) =>
-            category.platforms.slice(0, 1).map((platform) => (
+        {/* Platform Categories and CTA */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Desktop Platform Category Card */}
+          {tradingPlatformsData
+            .filter((category) => category.id === "desktop")
+            .map((category, index) => (
               <Card
-                key={platform.id}
-                className={`group relative overflow-hidden hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br ${platform.color.gradient}`}
+                key={category.id}
+                className={`group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 flex justify-center items-center bg-gradient-to-br ${category.color.secondary} dark:${category.color.gradient} hover:scale-[1.02] hover:-translate-y-1`}
+                style={{
+                  animationDelay: `${index * 150}ms`,
+                  boxShadow:
+                    "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                }}
               >
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between">
-                    <CardTitle
-                      className={`text-lg font-bold ${platform.color.text}`}
-                    >
-                      {platform.name}
-                    </CardTitle>
-                    <Badge
-                      variant="secondary"
-                      className={platform.color.secondary}
-                    >
-                      {platform.badge}
-                    </Badge>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Decorative Elements */}
+                <div
+                  className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${category.color.primary} opacity-10 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700`}
+                ></div>
+                <div
+                  className={`absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr ${category.color.primary} opacity-5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700`}
+                ></div>
+
+                <CardContent className="text-center p-6 relative z-10">
+                  {/* Icon Container */}
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${category.color.primary} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-2xl`}
+                  >
+                    <DynamicIcon
+                      name={category.icon}
+                      className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground mb-4">
-                    {platform.description}
+
+                  {/* Content */}
+                  <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+                    {category.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
+                    {category.description}
                   </CardDescription>
-                  <div className="space-y-1 mb-4">
-                    {platform.features.slice(0, 2).map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-2">
-                        <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
-                        <span className="text-sm text-muted-foreground">
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="text-right">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="group-hover:bg-primary group-hover:text-white transition-colors duration-300"
-                    >
-                      <DynamicIcon
-                        name={
-                          platform.type === "web" ? "ExternalLink" : "Download"
-                        }
-                        className="w-4 h-4"
-                      />
-                      {platform.type === "web" ? "Try WebTrader" : "Download"}
-                    </Button>
+                  <div className="text-xs text-muted-foreground">
+                    {category.platforms.length} platform
+                    {category.platforms.length !== 1 ? "s" : ""} available
                   </div>
                 </CardContent>
+                {/* Bottom Border Animation */}
+                <div
+                  className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${category.color.primary} group-hover:w-full transition-all duration-500 ease-out`}
+                ></div>
               </Card>
-            ))
-          )}
-        </div>
+            ))}
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex flex-col items-center p-6 bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/20 rounded-2xl">
-            <div className="text-xl font-bold text-primary mb-4">
-              Ready to Explore All Platforms?
-            </div>
-            <p className="text-muted-foreground max-w-md text-sm mb-6">
-              Discover detailed features, comparisons, and find the perfect
-              trading platform for your needs.
-            </p>
-            <Link href="/trading-platforms">
-              <Button className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-medium px-8 group">
-                <span>View All Platforms</span>
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </Link>
-          </div>
+          {/* Mobile Platform Category Card */}
+          {tradingPlatformsData
+            .filter((category) => category.id === "mobile")
+            .map((category, index) => (
+              <Card
+                key={category.id}
+                className={`group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 flex justify-center items-center bg-gradient-to-br ${category.color.secondary} dark:${category.color.gradient} hover:scale-[1.02] hover:-translate-y-1`}
+                style={{
+                  animationDelay: `${index * 150}ms`,
+                  boxShadow:
+                    "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                }}
+              >
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                {/* Decorative Elements */}
+                <div
+                  className={`absolute top-0 right-0 w-24 h-24 bg-gradient-to-br ${category.color.primary} opacity-10 rounded-full -translate-y-12 translate-x-12 group-hover:scale-150 transition-transform duration-700`}
+                ></div>
+                <div
+                  className={`absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr ${category.color.primary} opacity-5 rounded-full translate-y-8 -translate-x-8 group-hover:scale-125 transition-transform duration-700`}
+                ></div>
+
+                <CardContent className="text-center p-6 relative z-10">
+                  {/* Icon Container */}
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${category.color.primary} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-2xl`}
+                  >
+                    <DynamicIcon
+                      name={category.icon}
+                      className="w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <CardTitle className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+                    {category.name}
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-relaxed text-gray-600 dark:text-gray-300 mb-4">
+                    {category.description}
+                  </CardDescription>
+                  <div className="text-xs text-muted-foreground">
+                    {category.platforms.length} platform
+                    {category.platforms.length !== 1 ? "s" : ""} available
+                  </div>
+                </CardContent>
+                {/* Bottom Border Animation */}
+                <div
+                  className={`absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r ${category.color.primary} group-hover:w-full transition-all duration-500 ease-out`}
+                ></div>
+              </Card>
+            ))}
+
+          {/* CTA Card */}
+          <Card className="group relative overflow-hidden hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
+            <CardContent className="text-center p-6 flex flex-col items-center justify-center h-full">
+              <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary/80 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <CardTitle className="text-lg font-bold text-primary mb-2">
+                Explore All Platforms
+              </CardTitle>
+              <CardDescription className="text-sm text-muted-foreground mb-6">
+                Discover detailed features, comparisons, and find the perfect
+                trading platform for your needs.
+              </CardDescription>
+              <Link href="/trading-platforms">
+                <Button size="sm" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white font-medium px-6 group">
+                  <span>View All</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </Button>
+              </Link>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 export interface TradingPlatform {
   id: string;
   name: string;
-  type: "desktop" | "web" | "mobile";
+  type: "desktop" | "mobile";
   description: string;
   features: string[];
   badge: string;
@@ -13,7 +13,8 @@ export interface TradingPlatform {
   };
   icon: string;
   downloadUrl?: string;
-  webUrl?: string;
+  appleUrl?: string;
+  androidUrl?: string;
 }
 
 export interface PlatformCategory {
@@ -63,7 +64,6 @@ export const tradingPlatformsData: PlatformCategory[] = [
           text: "text-blue-600 dark:text-blue-400",
         },
         icon: "Monitor",
-        downloadUrl: "/download/mt4",
       },
       {
         id: "mt5-desktop",
@@ -87,68 +87,6 @@ export const tradingPlatformsData: PlatformCategory[] = [
           text: "text-emerald-600 dark:text-emerald-400",
         },
         icon: "Monitor",
-        downloadUrl: "/download/mt5",
-      },
-    ],
-  },
-  {
-    id: "web",
-    name: "Web Platform",
-    description: "Trade anywhere with browser-based platforms",
-    icon: "Globe",
-    color: {
-      primary: "from-orange-500 to-red-600",
-      secondary: "from-orange-50 to-red-50",
-      gradient: "from-orange-950/20 to-red-950/20",
-    },
-    platforms: [
-      {
-        id: "mt4-web",
-        name: "MT4 WebTrader",
-        type: "web",
-        description:
-          "The most popular trading platform used by millions worldwide with everything a trader needs.",
-        features: [
-          "No installation needed",
-          "Mirror successful traders in real-time",
-          "2,000+ products with dynamic leverage",
-          "Robust security and built-in tools",
-        ],
-        badge: "Web",
-        color: {
-          primary: "from-orange-500 to-red-600",
-          secondary:
-            "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300",
-          gradient:
-            "from-orange-50 to-red-50 dark:from-orange-950/20 dark:to-red-950/20",
-          text: "text-red-600 dark:text-red-400",
-        },
-        icon: "Globe",
-        webUrl: "/webtrader/mt4",
-      },
-      {
-        id: "mt5-web",
-        name: "MT5 WebTrader",
-        type: "web",
-        description:
-          "Advanced web-based trading platform with comprehensive features and real-time capabilities.",
-        features: [
-          "Mirror successful traders in real-time",
-          "2,000+ products with dynamic leverage",
-          "Robust security and built-in tools",
-          "Advanced charting capabilities",
-        ],
-        badge: "Advanced Web",
-        color: {
-          primary: "from-purple-500 to-pink-500",
-          secondary:
-            "bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300",
-          gradient:
-            "from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20",
-          text: "text-purple-600 dark:text-purple-400",
-        },
-        icon: "Globe",
-        webUrl: "/webtrader/mt5",
       },
     ],
   },
@@ -185,7 +123,9 @@ export const tradingPlatformsData: PlatformCategory[] = [
           text: "text-green-600 dark:text-green-400",
         },
         icon: "Smartphone",
-        downloadUrl: "/download/mt4-mobile",
+        appleUrl: "https://apps.apple.com/pk/app/metatrader-4/id496212596",
+        androidUrl:
+          "https://play.google.com/store/apps/details?id=net.metaquotes.metatrader4&hl=en-US",
       },
       {
         id: "mt5-mobile",
@@ -209,7 +149,9 @@ export const tradingPlatformsData: PlatformCategory[] = [
           text: "text-blue-600 dark:text-blue-400",
         },
         icon: "Smartphone",
-        downloadUrl: "/download/mt5-mobile",
+        appleUrl: "https://apps.apple.com/pk/app/metatrader-5/id413251709",
+        androidUrl:
+          "https://play.google.com/store/apps/details?id=net.metaquotes.metatrader5",
       },
     ],
   },

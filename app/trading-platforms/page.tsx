@@ -59,8 +59,8 @@ export default function TradingPlatformsPage() {
 
       {/* Platform Overview */}
       <section className="py-8">
-        <div className="container max-w-5xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6">
+        <div className="container max-w-3xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-6">
             {tradingPlatformsData.map((category, index) => (
               <Card
                 key={category.id}
@@ -165,14 +165,6 @@ export default function TradingPlatformsPage() {
                     </div>
                   ))}
                 </div>
-
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium group/btn">
-                  <DynamicIcon
-                    name="Download"
-                    className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
-                  />
-                  Download MT4
-                </Button>
               </CardContent>
             </Card>
 
@@ -215,14 +207,6 @@ export default function TradingPlatformsPage() {
                     </div>
                   ))}
                 </div>
-
-                <Button className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white font-medium group/btn">
-                  <DynamicIcon
-                    name="Download"
-                    className="w-4 h-4 group-hover/btn:scale-110 transition-transform duration-300"
-                  />
-                  Download MT5
-                </Button>
               </CardContent>
             </Card>
           </div>

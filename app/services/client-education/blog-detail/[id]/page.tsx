@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { ShareButtonWrapper } from "@/components/ui/share-button-wrapper";
 import {
   ArrowLeft,
   Calendar,
   Clock,
   User,
-  Share2,
   BookOpen,
   ArrowRight,
 } from "lucide-react";
@@ -109,14 +109,10 @@ export default function BlogDetail({ params }: { params: { id: string } }) {
                   <User className="w-4 h-4" />
                   <span>{blogPost.author}</span>
                 </div>
-                <Button
-                  variant="outline"
-                  size="sm"
+                <ShareButtonWrapper
+                  title={blogPost.title}
                   className="ml-auto bg-transparent"
-                >
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share
-                </Button>
+                />
               </div>
               <Separator />
             </div>

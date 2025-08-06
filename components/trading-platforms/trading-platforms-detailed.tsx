@@ -10,7 +10,14 @@ import { Button } from "@/components/ui/button";
 import { DynamicIcon } from "@/lib/utils/icons";
 import { tradingPlatformsData } from "@/lib/data/trading-platforms";
 import { generateWhatsAppLink, whatsappMessages } from "@/lib/utils/whatsapp";
-import { Sparkles, CheckCircle, ArrowRight, Star } from "lucide-react";
+import {
+  Sparkles,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Apple,
+  Smartphone,
+} from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import Link from "next/link";
 
@@ -114,27 +121,45 @@ export default function TradingPlatformsDetailed() {
                         </div>
                       </div>
 
-                      {/* Action Buttons */}
-                      <div className="flex justify-end pt-2">
-                        {(platform.downloadUrl || platform.webUrl) && (
-                          <Button
-                            variant="ghost"
-                            className={`bg-gradient-to-r ${platform.color.primary} hover:shadow-lg transition-all duration-300 text-white font-medium group/btn`}
-                          >
-                            <DynamicIcon
-                              name={
-                                platform.type === "web"
-                                  ? "ExternalLink"
-                                  : "Download"
-                              }
-                              className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300"
-                            />
-                            {platform.type === "web"
-                              ? "Try WebTrader"
-                              : "Download Now"}
-                          </Button>
+                      {/* Action Buttons - Only for Mobile Platforms */}
+                      {platform.type === "mobile" &&
+                        (platform.appleUrl || platform.androidUrl) && (
+                          <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                            <p>Download for: </p>
+                            {platform.appleUrl && (
+                              <Button
+                                variant="ghost"
+                                className="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black transition-all duration-300 text-white font-medium group/btn flex-1"
+                                asChild
+                              >
+                                <Link
+                                  href={platform.appleUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Apple className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" />
+                                  iOS
+                                </Link>
+                              </Button>
+                            )}
+                            {platform.androidUrl && (
+                              <Button
+                                variant="ghost"
+                                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all duration-300 text-white font-medium group/btn flex-1"
+                                asChild
+                              >
+                                <Link
+                                  href={platform.androidUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <Smartphone className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" />
+                                  Android
+                                </Link>
+                              </Button>
+                            )}
+                          </div>
                         )}
-                      </div>
                     </CardContent>
                   </Card>
                 ))}
