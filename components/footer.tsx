@@ -41,7 +41,6 @@ export default function Footer() {
                 { label: "Dubai, UAE" },
                 { label: "Abu Dhabi, UAE" },
                 { label: "Sharjah, UAE" },
-                { label: "Ajman, UAE" },
               ],
             },
             {
