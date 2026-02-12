@@ -10,6 +10,14 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/api-external/:path*",
+        destination: "https://cgrems.com/crm/web/:path*",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

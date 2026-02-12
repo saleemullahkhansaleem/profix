@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api-external/:path*",
+            "destination": "https://cgrems.com/crm/web/:path*"
+        }
+    ]
+}
